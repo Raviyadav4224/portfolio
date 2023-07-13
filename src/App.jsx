@@ -5,6 +5,8 @@ import Projects from "./components/Projects/Projects";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
+import Work from "./components/Work/Work";
+import Contact from "./components/Contact/Contact";
 import "./App.scss";
 const App = () => {
   return (
@@ -15,7 +17,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
-          <Route path="/about" element={<Header />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/work" element={<Work />} />
         </Routes>
         <Footer />
       </BrowserRouter>

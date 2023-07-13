@@ -1,0 +1,70 @@
+.about {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  background-color: #f1f1f1;
+  letter-spacing: 1px;
+  line-height: 25px;
+  > h1 {
+    font-size: 45px;
+    padding: 2rem;
+  }
+  > section {
+    display: flex;
+    .sectionLeft {
+      width: 50%;
+      padding: 5rem;
+      > h3 {
+        margin: 1rem;
+        letter-spacing: 1px;
+        line-height: 25px;
+      }
+      > div {
+        margin: 1rem;
+        > p {
+          margin: 20px 0;
+          //   letter-spacing: 1px;
+          //   line-height: 25px;
+        }
+        > span {
+          line-height: 25px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .sectionRight {
+      width: 50%;
+      padding: 5rem;
+      > h3 {
+        margin: 1rem;
+        // letter-spacing: 1px;
+        // line-height: 25px;
+      }
+      > div {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    .skills {
+      height: 2.8rem;
+      min-width: 3rem;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.8rem;
+      font-weight: 600;
+      border-radius: 5px;
+      padding: 3px 5px;
+      background-color: #ffffff;
+      &:hover {
+        background-color: chartreuse;
+        transition: all ease-in 0.3s;
+      }
+    }
+  }
+}
