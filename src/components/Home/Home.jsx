@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.scss";
 import developerPic from "../../assets/developerImage/image.webp";
-import downloadIcon from '../../assets/icons/download.svg'
+import resume from '../../assets/developerImage/dummy.pdf'
 const Home = () => {
   return (
     <div className="hero">
@@ -16,8 +16,7 @@ const Home = () => {
           articles, showcasing my expertise in React.js and web development.
         </p>
         <div className="buttonLinks">
-          <div href="/">Resume <img src={downloadIcon} alt=''/></div>
-          <a href="/">Contact</a>
+         <a href={resume} rel="noreferrer" target='_blank'>Resume</a>
         </div>
       </section>
     </div>

@@ -13,7 +13,11 @@ const About = () => {
     "Node Js",
     "Framer Motion",
     "JWT",
-    
+    "Java",
+    "Spingboot",
+    "Hibernate",
+    "Jenkins",
+    "Docker",
   ];
   return (
     <div className="about">
@@ -23,12 +27,10 @@ const About = () => {
           <h3>GET TO KNOW ME!</h3>
           <div>
             <p>
-              I'm a Frontend Developer from Maharashtra, India. I'm a
+              I'm a Full Stack Developer from Durgapur, West Bengal,India. I'm a
               self-motivated, enthusiastic, goal-oriented individual with 2+
               years of experience building and maintaing responsive websites.
-              Learning is one of the strengths which I prefer to continue
-              throughout and keep challenging myself. Currently I'm working in
-              TCS as a Frontend developer.
+              Currently I'm working in TCS as a Full Stack developer.
             </p>
             <span>
               I build web apps with a focus on React, Redux, JavaScript. I enjoy

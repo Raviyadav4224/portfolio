@@ -23,3 +23,9 @@ nav {
 .logo{
   font-size: 26px;
 }
+
+@media screen and (max-width:885px) {
+  .right{
+    display: none;
+  }
+}

@@ -6,40 +6,28 @@ import Timeline from "../Timeline/Timeline";
 const Work = () => {
   const timelineData = [
     {
-      title: "Btech",
-      year: "2017-2021",
-      description: ` Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque,
-      ipsam atque eius perferendis sed molestiae facilis nesciunt qui harum
-      praesentium neque repellendus inventore eligendi quod nostrum
-      reprehenderit esse unde`,
-      logo:cap
+      title: "TCS",
+      year: "Present",
+      description: `Currently Working as a Full Stack Web Developer for Passport Seva Project under Govt. of India using Java,Springboot,Hibernate,ReactJs,Jenkins,Docker technology stack`,
+      logo: suitcase,
     },
     {
       title: "Btech",
       year: "2017-2021",
-      description: ` Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque,
-      ipsam atque eius perferendis sed molestiae facilis nesciunt qui harum
-      praesentium neque repellendus inventore eligendi quod nostrum
-      reprehenderit esse unde`,
-      logo:suitcase
+      description: `Dr B.C. Roy Engineering College Durgapur, West Bengal (8.75CGPA)`,
+      logo: cap,
     },
     {
-      title: "Btech",
-      year: "2017-2021",
-      description: ` Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque,
-      ipsam atque eius perferendis sed molestiae facilis nesciunt qui harum
-      praesentium neque repellendus inventore eligendi quod nostrum
-      reprehenderit esse unde`,
-      logo:cap
+      title: "Class 12",
+      year: "2015",
+      description: `Hemsheela Model School Durgapur, West Bengal (87%)`,
+      logo: cap,
     },
     {
-      title: "Btech",
-      year: "2017-2021",
-      description: ` Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque,
-      ipsam atque eius perferendis sed molestiae facilis nesciunt qui harum
-      praesentium neque repellendus inventore eligendi quod nostrum
-      reprehenderit esse unde`,
-      logo:suitcase
+      title: "Class 10",
+      year: "2013",
+      description: ` Manisha International School Rajbandh, West Bengal (8.6CGPA)`,
+      logo: cap,
     },
   ];
 
@@ -54,6 +42,7 @@ const Work = () => {
             title={item.title}
             description={item.description}
             year={item.year}
+            key={index}
           />
         );
       })}

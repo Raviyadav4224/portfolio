@@ -1,16 +1,61 @@
 .projects {
-    min-height: 90vh;
-    height: auto;
-    padding: 2rem 4rem;
-    width: 100vw;
-    background-color: #f1f1f1;
-    letter-spacing: 1px;
-    line-height: 25px;
-    > h1 {
-      font-size: 45px;
-      padding: 2rem;
+  min-height: 90vh;
+  height: auto;
+  padding: 2rem 4rem;
+  width: 100vw;
+  background-color: #f1f1f1;
+  letter-spacing: 1px;
+  line-height: 25px;
+  > h1 {
+    font-size: 45px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards {
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    height: 350px;
+    width: 320px;
+    background-color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 10px;
+    margin: 1rem;
+    white-space: wrap;
+    &:hover{
+      transform: scale(1.05);
+      transition: all ease-in .2s;
+    }
+    > img {
+      height: 60%;
+      border-radius: 10px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .githubIcon {
+      height: 40px;
+      padding: 10px;
+      width: 40px;
+      cursor: pointer;
+    }
+    > small {
+      padding: 5px;
+      display: block;
+      height: 22%;
+      overflow: hidden;
+    }
+    > h3 {
+      padding: 5px;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
     }
   }
+}
