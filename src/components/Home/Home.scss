@@ -9,6 +9,7 @@
     justify-content: center;
 
     > img {
+      object-fit: scale-down;
       height: 34rem;
       width: 32rem;
     }
