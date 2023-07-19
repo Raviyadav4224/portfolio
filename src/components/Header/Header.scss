@@ -1,5 +1,5 @@
 nav {
-  height: 65px;
+  height: 10vh;
   // background-color: rgb(214, 196, 196);
   display: flex;
   justify-content: space-between;
@@ -23,9 +23,24 @@ nav {
 .logo{
   font-size: 26px;
 }
-
+.menu{
+  display: none;
+}
 @media screen and (max-width:885px) {
-  .right{
+  nav{
+    padding: 0 .6rem;
+  }
+  .info{
+    display: none;
+  }
+  .menu{
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width:600px){
+  .logo{
     display: none;
   }
 }

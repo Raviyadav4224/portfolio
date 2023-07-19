@@ -7,7 +7,7 @@
   letter-spacing: 1px;
   line-height: 25px;
   > h1 {
-    font-size: 45px;
+    font-size: 3.8rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -21,8 +21,8 @@
     flex-wrap: wrap;
   }
   .card {
-    height: 350px;
-    width: 320px;
+    height: 22rem;
+    width: 19rem;
     background-color: white;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
       rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -58,4 +58,12 @@
       align-items: center;
     }
   }
+}
+
+@media screen and (max-width:885px) {
+.projects{
+  >h1{
+    font-size: 2rem;
+  }
+}
 }
