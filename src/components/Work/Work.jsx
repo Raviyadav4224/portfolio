@@ -8,7 +8,7 @@ const Work = () => {
     {
       title: "TCS",
       year: "Present",
-      description: `Currently Working as a Full Stack Web Developer for Passport Seva Project under Govt. of India using Java,Springboot,Hibernate,ReactJs,Jenkins,Docker technology stack`,
+      description: `Currently Working as a Full Stack Web Developer for Passport Seva Project under Govt. of India using Java, Springboot, Hibernate, ReactJs, Jenkins, Docker technology stack `,
       logo: suitcase,
     },
     {

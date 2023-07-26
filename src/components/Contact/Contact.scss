@@ -54,14 +54,15 @@
       width: 50%;
       display: flex;
       justify-content: center;
-      flex-direction: column;
+        flex-wrap: wrap;
+        flex-direction: column;
       > div {
         display: flex;
         gap: 1rem;
         padding: 1rem;
         > img {
-          height: 50px;
-          width: 50px;
+          height: 3.5rem;
+          width: 3.5rem;
         }
       }
     }

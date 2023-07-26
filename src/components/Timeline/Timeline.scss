@@ -65,3 +65,15 @@
       left: -24px;
     }
   }
+
+
+  @media screen and (max-width:725px) {
+
+    .timeline{
+      width: 95%;
+    }
+    .timelineRight{
+      width: 95%;
+      left: 0;
+    }
+  }
