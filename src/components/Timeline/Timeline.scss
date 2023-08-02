@@ -1,29 +1,34 @@
 .timeline {
-    width: 50%;
-    padding: 0 1rem;
-    position: relative;
-    z-index: 1;
-    margin: 1rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+  margin: 1rem;
+  border-radius: 5px;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 6px;
+    // top: 37px;
+    right: 0;
+    z-index: -1;
+    background-color: #d9d9d9;
+  }
+  >div {
+    
+    width: 80%;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
       rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-    border-radius: 5px;
-    > h1,
+    >h1,
     small,
     p {
       padding: 1rem;
       white-space: wrap;
     }
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   height: 100%;
-    //   width: 6px;
-    //   top: 37px;
-    //   right: 0;
-    //   z-index: -1;
-    //   background-color: #d9d9d9;
-    // }
-    > img {
+    >img {
       height: 40px;
       width: 40px;
       position: absolute;
@@ -31,49 +36,80 @@
       top: 0;
       border-radius: 50%;
     }
+    
   }
-  .timelineRight {
-    width: 50%;
-    padding: 0 1rem;
-    border-radius: 5px;
-    position: relative;
-    margin: 1rem;
-    left: 50%;
-    z-index: 1;
+}
+.timelineRight {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 5px;
+  position: relative;
+  margin: 1rem;
+  left: 50%;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 6px;
+    // top: 37px;
+    left: -6px;
+    z-index: -1;
+    background-color: #d9d9d9;
+  }
+  >div {
+    width: 80%;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
       rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-    > h1,
+    >h1,
     small,
     p {
       padding: 1rem;
     }
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   height: 100%;
-    //   width: 6px;
-    //   top: 37px;
-    //   left: -6px;
-    //   z-index: -1;
-    //   background-color: #d9d9d9;
-    // }
-    > img {
+    >img {
       height: 40px;
       border-radius: 50%;
       width: 40px;
       position: absolute;
       left: -24px;
     }
+    
   }
 
 
-  @media screen and (max-width:725px) {
 
-    .timeline{
-      width: 95%;
+
+}
+
+
+@media screen and (max-width:725px) {
+
+  .timeline {
+    width: 95%;
+    &::after {
+      content: "";
+      left: 17px;
     }
-    .timelineRight{
-      width: 95%;
-      left: 0;
+    >div{
+      >img{
+        left: 0px;
+      }
     }
   }
+
+  .timelineRight {
+    width: 95%;
+    left: 0;
+    &::after {
+      content: "";
+      left: 17px;
+    }
+    >div{
+      >img{
+        left: 0px;
+      }
+    }
+  }
+}

@@ -20,14 +20,14 @@ const Contact = () => {
             <img src={location} alt="" />
             <div>
               <p>Address</p>
-              <p>Durgapur,India</p>
+              <p><b>Durgapur,India</b></p>
             </div>
           </div>
           <div>
             <img src={email} alt="" />
             <div>
               <p>Email</p>
-              <p>raviyadav4224@gmail.com</p>
+              <p><b>raviyadav4224@gmail.com</b></p>
             </div>
           </div>
         </div>

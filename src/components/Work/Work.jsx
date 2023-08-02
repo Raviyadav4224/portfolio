@@ -33,19 +33,18 @@ const Work = () => {
 
   return (
     <div className="work">
-      <h1>Education & Work</h1>
-      {timelineData?.map((item, index) => {
-        return (
-          <Timeline
-            left={index % 2 === 0 ? true : false}
-            logo={item.logo}
-            title={item.title}
-            description={item.description}
-            year={item.year}
-            key={index}
-          />
-        );
-      })}
+          {timelineData?.map((item, index) => {
+            return (
+              <Timeline
+                left={index % 2 === 0 ? true : false}
+                logo={item.logo}
+                title={item.title}
+                description={item.description}
+                year={item.year}
+                key={index}
+              />
+            );
+          })}
     </div>
   );
 };
