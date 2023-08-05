@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.scss";
 import githubIcon from "../../assets/icons/github.svg";
@@ -6,8 +6,11 @@ import instagramIcon from "../../assets/icons/instagram.svg";
 import linkedinIcon from "../../assets/icons/linkedin.svg";
 import darkmode from "../../assets/icons/darkmode.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../../redux/actions";
 const Header = ({ toggleSidebar, setToggleSidebar }) => {
-  const [isDark, setIsDark] = useState(false);
+  const dispatch = useDispatch();
+  const { isDark } = useSelector((state) => state.darkMode);
   return (
     <nav>
       <div className="menu">
@@ -57,7 +60,11 @@ const Header = ({ toggleSidebar, setToggleSidebar }) => {
             window.open("https://www.linkedin.com/in/ravi-kumar-bb7111260/")
           }
         />
-        <img src={darkmode} alt="" onClick={() => setIsDark(!isDark)} />
+        <img
+          src={darkmode}
+          alt=""
+          onClick={() => dispatch(toggleDarkMode(isDark))}
+        />
       </div>
     </nav>
   );

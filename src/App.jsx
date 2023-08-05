@@ -10,12 +10,27 @@ import Contact from "./components/Contact/Contact";
 import "./App.scss";
 import Sidebar from "./components/Sidebar/Sidebar";
 const App = () => {
-  const [toggleSidebar,setToggleSidebar]=useState(false)
+  const [toggleSidebar, setToggleSidebar] = useState(false);
+
+  // definining a HOC
+  // const addDarkMode = (Component) => {
+  //   const DarkComponent = () => {
+  //     return <Component isDark={isDark} setIsDark={setIsDark} />;
+  //   };
+  //   return DarkComponent;
+  // };
+  // const HomeWithDarkMode = addDarkMode(Home);
   return (
     <>
       <BrowserRouter>
-        <Header toggleSidebar={toggleSidebar} setToggleSidebar={setToggleSidebar} />
-        <Sidebar toggleSidebar={toggleSidebar} setToggleSidebar={setToggleSidebar}/>
+        <Header
+          toggleSidebar={toggleSidebar}
+          setToggleSidebar={setToggleSidebar}
+        />
+        <Sidebar
+          toggleSidebar={toggleSidebar}
+          setToggleSidebar={setToggleSidebar}
+        />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />

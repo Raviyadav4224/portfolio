@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.scss";
+import { useSelector } from "react-redux";
 const About = () => {
   // const skills = [
   //   "React Js, Javascript, Css,Git ,HTML,Node Js, Framer Motion, JWT",
@@ -19,8 +20,9 @@ const About = () => {
     "Jenkins",
     "Docker",
   ];
+  const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className="about">
+    <div className={`${isDark ? "" : "about"}`}>
       <h1>About Me</h1>
       <section>
         <section className="sectionLeft">

@@ -2,9 +2,11 @@ import React from "react";
 import "./Contact.scss";
 import email from "../../assets/icons/email.svg";
 import location from "../../assets/icons/location.svg";
+import { useSelector } from "react-redux";
 const Contact = () => {
+  const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className="contact">
+    <div className={`${isDark ? "" : "contact"}`}>
       <h1>Contact Me</h1>
       <div className="container">
         <div className="left">

@@ -26,8 +26,15 @@
 }
 
 
+@media screen and (max-width:885px) {
+.sidebar{
+  position:fixed;
+  top: 10vh;
+}
+}
+
 @media screen and (max-width:600px) {
   .sidebar{
-    width: 80vw;
+    width: 100vw;
   }
 }

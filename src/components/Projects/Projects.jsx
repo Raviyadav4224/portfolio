@@ -4,6 +4,7 @@ import project1 from "../../assets/developerImage/project1.png";
 import project2 from "../../assets/developerImage/project2.png";
 import project3 from "../../assets/developerImage/project3.png";
 import githubIcon from "../../assets/icons/github.svg";
+import { useSelector } from "react-redux";
 const Projects = () => {
   const projectList=[
     {
@@ -25,8 +26,9 @@ const Projects = () => {
       imageURL:project3
     }
   ]
+  const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className="projects">
+    <div className={`${isDark ? "" : "projects"}`}>
       <h1>My Projects</h1>
       <div className="cards">
         {

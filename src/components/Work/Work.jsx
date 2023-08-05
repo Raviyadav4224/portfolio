@@ -3,6 +3,7 @@ import "./Work.scss";
 import suitcase from "../../assets/icons/suitcase.svg";
 import cap from "../../assets/icons/cap.svg";
 import Timeline from "../Timeline/Timeline";
+import { useSelector } from "react-redux";
 const Work = () => {
   const timelineData = [
     {
@@ -30,9 +31,9 @@ const Work = () => {
       logo: cap,
     },
   ];
-
+  const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className="work">
+    <div className={`${isDark ? "" : "work"}`}>
           {timelineData?.map((item, index) => {
             return (
               <Timeline
