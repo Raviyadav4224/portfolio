@@ -1,13 +1,16 @@
-import React from 'react'
-import './Footer.scss'
+import React from "react";
+import "./Footer.scss";
+import { useSelector } from "react-redux";
 const Footer = () => {
-  return (
-   <footer>
-    <div>{new Date().getFullYear()} &copy; All Rights Reserved.</div>
-    <div>Built with &#9829; by Ravi Kumar</div>
-    <div>Thanks for visiting</div>
-   </footer>
-  )
-}
+  const { isDark } = useSelector((state) => state.darkMode);
 
-export default Footer
+  return (
+    <footer className={`${isDark ? "darkMode" : ""}`}>
+      <div>{new Date().getFullYear()} &copy; All Rights Reserved.</div>
+      <div>Built with &#9829; by Ravi Kumar</div>
+      <div>Thanks for visiting</div>
+    </footer>
+  );
+};
+
+export default Footer;
