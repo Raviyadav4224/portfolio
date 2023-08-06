@@ -1,15 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.scss";
-import githubIcon from "../../assets/icons/github.svg";
-import instagramIcon from "../../assets/icons/instagram.svg";
-import linkedinIcon from "../../assets/icons/linkedin.svg";
+import { useSelector } from "react-redux";
+import Github from "../Icons/Github";
+import Instagram from "../Icons/Instagram";
+import Linkedin from "../Icons/Linkedin";
 const Sidebar = ({ toggleSidebar, setToggleSidebar }) => {
   const closeSidebar = () => {
     setToggleSidebar(!toggleSidebar);
   };
+  const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className={`sidebar ${toggleSidebar ? "isShow" : "isHidden"}`}>
+    <div
+      className={`sidebar ${toggleSidebar ? "isShow" : "isHidden"} ${
+        isDark ? "darkMode" : ""
+      }`}
+    >
       <NavLink className="" to="/about" onClick={closeSidebar}>
         About
       </NavLink>
@@ -22,22 +28,11 @@ const Sidebar = ({ toggleSidebar, setToggleSidebar }) => {
       <NavLink className="" to="/contact" onClick={closeSidebar}>
         Contact
       </NavLink>
-      <img
-        src={githubIcon}
-        className=""
-        alt=""
-        onClick={() => window.open("https://github.com/Raviyadav4224")}
-      />
-      <img
-        src={instagramIcon}
-        className=""
-        alt=""
+      <Github onClick={() => window.open("https://github.com/Raviyadav4224")} />
+      <Instagram
         onClick={() => window.open("https://www.instagram.com/ravi_kumar4224/")}
       />
-      <img
-        src={linkedinIcon}
-        className=""
-        alt=""
+      <Linkedin
         onClick={() =>
           window.open("https://www.linkedin.com/in/ravi-kumar-bb7111260/")
         }

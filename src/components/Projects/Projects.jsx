@@ -3,8 +3,8 @@ import "./Projects.scss";
 import project1 from "../../assets/developerImage/project1.png";
 import project2 from "../../assets/developerImage/project2.png";
 import project3 from "../../assets/developerImage/project3.png";
-import githubIcon from "../../assets/icons/github.svg";
 import { useSelector } from "react-redux";
+import Github from "../Icons/Github";
 const Projects = () => {
   const projectList=[
     {
@@ -28,7 +28,7 @@ const Projects = () => {
   ]
   const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className={`${isDark ? "" : "projects"}`}>
+    <div className={`projects ${isDark ? "darkMode" : ""}`}>
       <h1>My Projects</h1>
       <div className="cards">
         {
@@ -38,14 +38,7 @@ const Projects = () => {
               <img src={item.imageURL} alt="" />
               <h3>
                 {item.title}
-                <img
-                  src={githubIcon}
-                  className="githubIcon"
-                  alt=""
-                  onClick={() =>
-                    window.open(item.repoURL)
-                  }
-                />
+                <Github className="githubIcon" onClick={() => window.open("https://github.com/Raviyadav4224")} />
               </h3>
               <small>
                 {item.desc}

@@ -1,3 +1,4 @@
+@use "../../App.scss" as globalVar;
 .work {
   min-height: 110vh;
   height: auto;
@@ -19,6 +20,12 @@
   }
 }
 
+.darkMode{
+  background-color: globalVar.$bgColorDarkMode;
+  >h1{
+    color: globalVar.$textColorDarkMode;
+  }
+}
 @media screen and (max-width: 885px) {
   .work {
     > h1 {

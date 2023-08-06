@@ -1,3 +1,4 @@
+@use "../../App.scss" as globalVar;
 .contact {
   min-height: 110vh;
   height: auto;
@@ -25,12 +26,12 @@
       align-items: center;
       justify-content: center;
 
-      >form {
+      > form {
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        >input,
+        > input,
         textarea {
           border: none;
           width: 20rem;
@@ -46,7 +47,7 @@
           font-size: 14px;
         }
 
-        >button {
+        > button {
           margin: 1rem;
           padding: 0.8rem;
           font-weight: 500;
@@ -71,14 +72,34 @@
       flex-wrap: wrap;
       flex-direction: column;
 
-      >div {
+      > div {
         display: flex;
         gap: 1rem;
         padding: 1rem;
 
-        >img {
+        > img {
           height: 3.5rem;
           width: 3.5rem;
+        }
+      }
+    }
+  }
+}
+
+.darkMode {
+  background-color: globalVar.$bgColorDarkMode;
+  .container {
+    .left {
+      > form {
+        > input,
+        textArea {
+          &:focus {
+            outline: 0.5px solid globalVar.$textColorDarkMode;
+          }
+        }
+        > button {
+          background-color: globalVar.$textColorDarkMode;
+          color: globalVar.$bgColorDarkMode;
         }
       }
     }
@@ -89,13 +110,12 @@
   .contact {
     padding: 2rem 2rem;
     .container {
-
       .left,
       .right {
         width: 100%;
 
-        >div {
-          >img {
+        > div {
+          > img {
             height: 2rem;
             width: 2rem;
           }

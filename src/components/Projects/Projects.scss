@@ -1,3 +1,4 @@
+@use "../../App.scss" as globalVar;
 .projects {
   min-height: 100vh;
   height: auto;
@@ -9,7 +10,7 @@
   position: relative;
   top: 10vh;
 
-  >h1 {
+  > h1 {
     font-size: 3.8rem;
     padding: 2rem;
     display: flex;
@@ -18,7 +19,6 @@
   }
 
   .cards {
-    overflow-x: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,10 +37,10 @@
 
     &:hover {
       transform: scale(1.05);
-      transition: all ease-in .2s;
+      transition: all ease-in 0.2s;
     }
 
-    >img {
+    > img {
       height: 60%;
       border-radius: 10px;
       width: 100%;
@@ -54,14 +54,14 @@
       cursor: pointer;
     }
 
-    >small {
+    > small {
       padding: 5px;
       display: block;
       height: 22%;
       overflow: hidden;
     }
 
-    >h3 {
+    > h3 {
       padding: 5px;
       display: flex;
       justify-content: space-between;
@@ -70,17 +70,27 @@
   }
 }
 
+.darkMode {
+  background-color: globalVar.$bgColorDarkMode;
+  .card {
+    > h3 {
+      color: globalVar.$textColorDarkMode;
 
-@media screen and (max-width:1135px) {
-  .projects{
+    }
+    background-color: globalVar.$bgColorDarkMode;
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  .projects {
     margin-bottom: 4rem;
   }
 }
-@media screen and (max-width:885px) {
+@media screen and (max-width: 885px) {
   .projects {
     padding: 0;
     margin-bottom: 4rem;
-    >h1 {
+    > h1 {
       font-size: 2rem;
     }
   }

@@ -22,7 +22,7 @@ const About = () => {
   ];
   const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className={`${isDark ? "" : "about"}`}>
+    <div className={`about ${isDark ? "darkMode" : ""}`}>
       <h1>About Me</h1>
       <section>
         <section className="sectionLeft">

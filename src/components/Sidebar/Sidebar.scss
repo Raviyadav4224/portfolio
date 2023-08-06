@@ -1,3 +1,4 @@
+@use "../../App.scss" as globalVar;
 .sidebar {
   height: 90vh;
   width: 30vw;
@@ -25,7 +26,9 @@
   transition: all ease-in 0.3s;
 }
 
-
+.darkMode{
+            background-color: globalVar.$bgColorDarkMode;
+}
 @media screen and (max-width:885px) {
 .sidebar{
   position:fixed;

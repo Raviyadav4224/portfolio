@@ -1,18 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.scss";
-import githubIcon from "../../assets/icons/github.svg";
-import instagramIcon from "../../assets/icons/instagram.svg";
-import linkedinIcon from "../../assets/icons/linkedin.svg";
-import darkmode from "../../assets/icons/darkmode.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../../redux/actions";
+import Github from "../Icons/Github";
+import Linkedin from "../Icons/Linkedin";
+import Instagram from "../Icons/Instagram";
+import DarkMode from "../Icons/DarkMode";
+import LightMode from "../Icons/LightMode";
 const Header = ({ toggleSidebar, setToggleSidebar }) => {
   const dispatch = useDispatch();
   const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <nav>
+    <nav className={`${isDark ? "darkMode" : ""}`}>
       <div className="menu">
         {toggleSidebar ? (
           <AiOutlineClose onClick={() => setToggleSidebar(!toggleSidebar)} />
@@ -38,33 +39,33 @@ const Header = ({ toggleSidebar, setToggleSidebar }) => {
         </NavLink>
       </div>
       <div className="right">
-        <img
-          src={githubIcon}
-          className="info"
-          alt=""
+        <Github
           onClick={() => window.open("https://github.com/Raviyadav4224")}
+          className="github"
         />
-        <img
-          src={instagramIcon}
-          className="info"
-          alt=""
+        <Instagram
           onClick={() =>
             window.open("https://www.instagram.com/ravi_kumar4224/")
           }
+          className="instagram"
         />
-        <img
-          src={linkedinIcon}
-          className="info"
-          alt=""
+        <Linkedin
           onClick={() =>
             window.open("https://www.linkedin.com/in/ravi-kumar-bb7111260/")
           }
+          className="linkedin"
         />
-        <img
-          src={darkmode}
-          alt=""
-          onClick={() => dispatch(toggleDarkMode(isDark))}
-        />
+        {isDark ? (
+          <LightMode
+            onClick={() => dispatch(toggleDarkMode(isDark))}
+            className="lightModeSvg"
+          />
+        ) : (
+          <DarkMode
+            onClick={() => dispatch(toggleDarkMode(isDark))}
+            className="darkModeSvg"
+          />
+        )}
       </div>
     </nav>
   );

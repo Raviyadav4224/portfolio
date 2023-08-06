@@ -1,3 +1,4 @@
+@use "../../App.scss" as globalVar;
 .timeline {
   width: 50%;
   display: flex;
@@ -83,7 +84,13 @@
 
 }
 
-
+.darkMode{
+  >div{
+    h1,small,p{
+      color: globalVar.$textColorDarkMode; ;
+    }
+  }
+}
 @media screen and (max-width:725px) {
 
   .timeline {

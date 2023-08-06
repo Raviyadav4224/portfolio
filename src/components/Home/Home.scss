@@ -1,3 +1,4 @@
+@use "../../App.scss" as globalVar;
 .hero {
   min-height: 100vh;
   height: auto;
@@ -33,7 +34,7 @@
       font-size: 1.2rem;
       font-weight: 300;
     }
-    > .buttonLinks {
+    .buttonLinks {
       width: 100px;
       display: flex;
       margin: 1rem 0;
@@ -54,11 +55,19 @@
     }
   }
 }
-.heroDarkMode {
-  background-color: #1B1B1B;
-  .section1,.section2 {
-    >p{
-      color: #F5F5F5;
+.darkMode {
+  background-color: globalVar.$bgColorDarkMode;
+  .section1,
+  .section2 {
+    > p,
+    h1 {
+      color: globalVar.$textColorDarkMode;
+    }
+    .buttonLinks {
+      background-color: white;
+      > a {
+        color: globalVar.$bgColorDarkMode;
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+@use "../../App.scss" as globalVar;
 nav {
   height: 10vh;
   background-color: white;
@@ -9,7 +10,6 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 999;
-  
 }
 .left {
   a {
@@ -17,28 +17,60 @@ nav {
   }
 }
 .right {
-  > img {
+  > svg {
     cursor: pointer;
     margin: 0.8rem;
     height: 30px;
     width: 30px;
+    &:hover {
+      transform: translateY(-3px);
+      transition: all ease-in 0.15s;
+    }
   }
 }
-.logo{
+.logo {
   font-size: 26px;
 }
-.menu{
+.menu {
   display: none;
 }
-@media screen and (max-width:885px) {
-  nav{
-    padding: 0 .6rem;
+
+.darkMode {
+  .left {
+    > a {
+      color: globalVar.$textColorDarkMode;
+    }
   }
-  .info{
+  .right {
+    > svg {
+      cursor: pointer;
+      margin: 0.8rem;
+      height: 30px;
+      width: 30px;
+    }
+    .github {
+      > g {
+        > g {
+          fill: white;
+        }
+      }
+    }
+    .lightModeSvg{
+      >rect{
+        fill: white;
+      }
+    }
+  }
+}
+@media screen and (max-width: 885px) {
+  nav {
+    padding: 0 0.6rem;
+  }
+  .info {
     display: none;
   }
-  .menu{
-    padding: .5rem;
+  .menu {
+    padding: 0.5rem;
     font-size: 1.4rem;
     display: block;
     cursor: pointer;

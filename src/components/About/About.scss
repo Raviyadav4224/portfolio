@@ -1,3 +1,4 @@
+@use "../../App.scss" as globalVar;
 .about {
   min-height: 100vh;
   height: auto;
@@ -86,6 +87,24 @@
   }
 }
 
+
+.darkMode{
+  >h1{
+    color: globalVar.$textColorDarkMode;
+  }
+  .sectionLeft,.sectionRight{
+    >h3{
+      color: globalVar.$textColorDarkMode;
+
+    }
+    >div{
+      >p,span{
+        color: globalVar.$textColorDarkMode;
+
+      }
+    }
+  }
+}
 @media screen and (max-width:885px) {
   .about {
     padding: 2rem 2rem;

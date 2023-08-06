@@ -7,7 +7,7 @@ const Home = () => {
   const { isDark } = useSelector((state) => state.darkMode);
 
   return (
-    <div className={`hero ${isDark ? "heroDarkMode" : "darkMode"}`}>
+    <div className={`hero ${isDark ? "darkMode" : ""}`}>
       <section className="section1">
         <img src={developerPic} alt="" />
       </section>
