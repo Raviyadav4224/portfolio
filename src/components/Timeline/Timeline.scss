@@ -84,7 +84,11 @@
 
 }
 
-.darkMode{
+.darkModeTimeline{
+  >div{
+    background-color: #303134;
+    border-radius: 8px;
+  }
   >div{
     h1,small,p{
       color: globalVar.$textColorDarkMode; ;

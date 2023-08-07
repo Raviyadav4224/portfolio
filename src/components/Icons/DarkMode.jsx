@@ -13,11 +13,11 @@ const DarkMode = (props) => {
       <g
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
       >
-        <g stroke-dasharray="2">
+        <g strokeDasharray="2">
           <path d="M12 21v1M21 12h1M12 3v-1M3 12h-1">
             <animate
               fill="freeze"
@@ -44,7 +44,7 @@ const DarkMode = (props) => {
           <set attributeName="opacity" begin="0.5s" to="1" />
         </path>
       </g>
-      <g fill="currentColor" fill-opacity="0">
+      <g fill="currentColor" fillOpacity="0">
         <path d="m15.22 6.03l2.53-1.94L14.56 4L13.5 1l-1.06 3l-3.19.09l2.53 1.94l-.91 3.06l2.63-1.81l2.63 1.81z">
           <animate
             id="lineMdSunnyFilledLoopToMoonFilledLoopTransition0"

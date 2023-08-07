@@ -41,19 +41,19 @@ const Header = ({ toggleSidebar, setToggleSidebar }) => {
       <div className="right">
         <Github
           onClick={() => window.open("https://github.com/Raviyadav4224")}
-          className="github"
+          className="github info"
         />
         <Instagram
           onClick={() =>
             window.open("https://www.instagram.com/ravi_kumar4224/")
           }
-          className="instagram"
+          className="instagram info"
         />
         <Linkedin
           onClick={() =>
             window.open("https://www.linkedin.com/in/ravi-kumar-bb7111260/")
           }
-          className="linkedin"
+          className="linkedin info"
         />
         {isDark ? (
           <LightMode

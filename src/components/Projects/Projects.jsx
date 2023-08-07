@@ -28,14 +28,14 @@ const Projects = () => {
   ]
   const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className={`projects ${isDark ? "darkMode" : ""}`}>
+    <div className={`projects ${isDark ? "darkModeProject" : ""}`}>
       <h1>My Projects</h1>
       <div className="cards">
         {
           projectList.map((item,index)=>{
             return (
               <div className="card" key={index}>
-              <img src={item.imageURL} alt="" />
+              <img src={item.imageURL} alt=""/>
               <h3>
                 {item.title}
                 <Github className="githubIcon" onClick={() => window.open("https://github.com/Raviyadav4224")} />

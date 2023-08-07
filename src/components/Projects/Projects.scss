@@ -3,7 +3,6 @@
   min-height: 100vh;
   height: auto;
   padding: 2rem 4rem;
-  width: 100vw;
   background-color: #f1f1f1;
   letter-spacing: 1px;
   line-height: 25px;
@@ -70,12 +69,22 @@
   }
 }
 
-.darkMode {
+.darkModeProject {
   background-color: globalVar.$bgColorDarkMode;
-  .card {
-    > h3 {
-      color: globalVar.$textColorDarkMode;
+  >h1{
+    color: globalVar.$textColorDarkMode;
 
+  }
+  .card {
+    background-color: #303134 !important;
+    > h3,
+    small {
+      > svg {
+        > g > g {
+          fill: white;
+        }
+      }
+      color: globalVar.$textColorDarkMode;
     }
     background-color: globalVar.$bgColorDarkMode;
   }

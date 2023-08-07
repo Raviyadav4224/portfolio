@@ -2,7 +2,7 @@ import { createReducer } from "@reduxjs/toolkit";
 
 export const darkModeReducer = createReducer(
   {
-    isDark: false,
+    isDark: JSON.stringify(localStorage.getItem("theme")) === "dark" ? true : false,
   },
   {
     // darkModeRequest:(state,action)=>{

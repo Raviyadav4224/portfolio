@@ -1,3 +1,4 @@
+@use "../../App.scss" as globalVar;
 footer{
     height: 90px;
     padding:1rem 4rem;
@@ -9,7 +10,11 @@ footer{
     font-weight: lighter;
     position: relative;
 }
-
+.darkMode{
+    >div{
+        color: globalVar.$textColorDarkMode;
+    }
+}
 
 @media screen and (max-width:750px){
     footer{

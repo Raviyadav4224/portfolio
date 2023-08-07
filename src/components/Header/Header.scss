@@ -36,6 +36,11 @@ nav {
 }
 
 .darkMode {
+  .menu{
+    >svg{
+      fill: white;
+    }
+  }
   .left {
     > a {
       color: globalVar.$textColorDarkMode;
@@ -53,11 +58,6 @@ nav {
         > g {
           fill: white;
         }
-      }
-    }
-    .lightModeSvg{
-      >rect{
-        fill: white;
       }
     }
   }

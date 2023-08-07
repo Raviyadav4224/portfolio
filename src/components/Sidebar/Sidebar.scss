@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  > img {
+  > svg {
     cursor: pointer;
     margin: 0.8rem;
     height: 30px;
@@ -26,18 +26,21 @@
   transition: all ease-in 0.3s;
 }
 
-.darkMode{
-            background-color: globalVar.$bgColorDarkMode;
+.darkMode {
+  background-color: globalVar.$bgColorDarkMode;
+  > a {
+    color: globalVar.$textColorDarkMode;
+  }
 }
-@media screen and (max-width:885px) {
-.sidebar{
-  position:fixed;
-  top: 10vh;
-}
+@media screen and (max-width: 885px) {
+  .sidebar {
+    position: fixed;
+    top: 10vh;
+  }
 }
 
-@media screen and (max-width:600px) {
-  .sidebar{
+@media screen and (max-width: 600px) {
+  .sidebar {
     width: 100vw;
   }
 }

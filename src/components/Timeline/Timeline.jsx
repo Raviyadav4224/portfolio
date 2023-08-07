@@ -4,7 +4,7 @@ const Timeline = (props) => {
   return (
     <div
       className={`${props.left ? "timeline" : "timelineRight"}  ${
-        props.isDark ? "darkMode" : ""
+        props.isDark ? "darkModeTimeline" : ""
       }`}
     >
       <div>
