@@ -10,19 +10,19 @@ const Projects = () => {
     {
       title:"Netflix Clone",
       desc:"Created Netflix Clone using ReactJs,Nodejs,MongoDb & JWT.",
-      repoURL:'https://raviyadav4224.github.io/netflix_clone/',
+      projectURL:'https://raviyadav4224.github.io/netflix_clone/',
       imageURL:project1
     },
     {
       title:"Food Website",
       desc:"Food website using HTML CSS & JS",
-      repoURL:'https://raviyadav4224.github.io/IFoodYou/',
+      projectURL:'https://raviyadav4224.github.io/IFoodYou/',
       imageURL:project2
     },
     {
       title:"Magic Notes",
       desc:"Notes app where you can save your important notes",
-      repoURL:'https://raviyadav4224.github.io/MagicNotes/',
+      projectURL:'https://raviyadav4224.github.io/MagicNotes/',
       imageURL:project3
     }
   ]
@@ -35,7 +35,7 @@ const Projects = () => {
           projectList.map((item,index)=>{
             return (
               <div className="card" key={index}>
-              <img src={item.imageURL} alt=""/>
+              <img src={item.imageURL} alt="" onClick={()=>window.open(item.projectURL)}/>
               <h3>
                 {item.title}
                 <Github className="githubIcon" onClick={() => window.open("https://github.com/Raviyadav4224")} />

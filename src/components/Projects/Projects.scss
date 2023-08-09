@@ -44,6 +44,9 @@
       border-radius: 10px;
       width: 100%;
       overflow: hidden;
+      &:hover{
+        cursor: pointer;
+      }
     }
 
     .githubIcon {
