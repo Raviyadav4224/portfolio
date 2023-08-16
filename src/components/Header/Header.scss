@@ -14,7 +14,22 @@ nav {
 .left {
   a {
     margin: 0.8rem;
+    position: relative;
   }
+  a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0%;
+    height: 3px;
+    background-color: #F76D57;
+  }
+  a:hover::after{
+    width: 100%;
+    transition: all ease-in .25s;
+  }
+  
 }
 .right {
   > svg {
