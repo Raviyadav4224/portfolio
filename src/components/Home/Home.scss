@@ -11,10 +11,11 @@
     align-items: center;
     justify-content: center;
 
-    > img {
-      object-fit: scale-down;
-      height: 34rem;
-      width: 32rem;
+    > img , >video {
+      // object-fit: cover;
+      height: 26rem;
+      width: 24rem;
+      border-radius: 100%;
     }
   }
   > .section2 {
