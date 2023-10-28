@@ -15,7 +15,7 @@ const About = () => {
     "Framer Motion",
     "JWT",
     "Java",
-    "Spingboot",
+    "Springboot",
     "Hibernate",
     "Jenkins",
     "Docker",
@@ -35,7 +35,7 @@ const About = () => {
               Currently I'm working in TCS as a Full Stack developer.
             </p>
             <span>
-              I build web apps with a focus on React, Redux, JavaScript. I enjoy
+              I build websites with a focus on React, Redux, JavaScript. I enjoy
               turning complex problems into simple and beautiful designs.
             </span>
           </div>
