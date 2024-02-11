@@ -7,15 +7,30 @@
     text-decoration: none;
     color: black;
   }
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     width: 8px;
   }
-  ::-webkit-scrollbar-thumb{
+  ::-webkit-scrollbar-thumb {
     background: #303134;
     border-radius: 5px;
   }
-}
+  ::-webkit-scrollbar-button {
+    cursor: pointer;
+  }
 
+  @media (prefers-color-scheme: dark) {
+    .theme {
+      color: #ffffff;
+      background-color: #0c0c0c;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    .theme {
+      background-color: #ffffff;
+      color: #696969;
+    }
+  }
+}
 
 $bgColorDarkMode: #1b1b1b;
 $textColorDarkMode: #f5f5f5;
