@@ -12,17 +12,6 @@ import LightMode from "../Icons/LightMode";
 const Header = ({ toggleSidebar, setToggleSidebar }) => {
   const dispatch = useDispatch();
   const { isDark } = useSelector((state) => state.darkMode);
-  useEffect(() => {
-    if (window.matchMedia("(prefer-color-scheme:dark)").matches) {
-      dispatch(
-        toggleDarkMode(
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-        )
-      );
-    } else {
-      dispatch(toggleDarkMode(false));
-    }
-  }, [dispatch]);
   return (
     <nav className={`${isDark ? "darkMode" : ""}`}>
       <div className="menu">

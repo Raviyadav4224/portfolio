@@ -2,18 +2,11 @@ import { createReducer } from "@reduxjs/toolkit";
 
 export const darkModeReducer = createReducer(
   {
-    isDark: false,
+    isDark:window.matchMedia &&  window.matchMedia("(prefers-color-scheme:dark)").matches,
   },
   {
-    // darkModeRequest:(state,action)=>{
-    //     state.loading=true
-    // },
     darkModeSuccess: (state, action) => {
       state.isDark = action.payload;
     },
-    // darkModeFail:(state,action)=>{
-    //     state.loading=false
-    //     state.error=action.payload
-    // }
   }
 );
