@@ -76,7 +76,7 @@
       font-weight: 600;
       border-radius: 5px;
       padding: 3px 5px;
-      background-color: #ffffff;
+      // background-color: black;
       margin: .5rem;
 
       &:hover {
@@ -87,24 +87,6 @@
   }
 }
 
-
-.darkMode{
-  >h1{
-    color: globalVar.$textColorDarkMode;
-  }
-  .sectionLeft,.sectionRight{
-    >h3{
-      color: globalVar.$textColorDarkMode;
-
-    }
-    >div{
-      >p,span{
-        color: globalVar.$textColorDarkMode;
-
-      }
-    }
-  }
-}
 @media screen and (max-width:885px) {
   .about {
     padding: 2rem 2rem;

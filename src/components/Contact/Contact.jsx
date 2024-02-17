@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const Contact = () => {
   const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className={`contact ${isDark ? "darkMode" : ""}`}>
+    <div className={`contact ${isDark ? "darktheme" : "lighttheme"}`}>
       <h1>Contact Me</h1>
       <div className="container">
         <div className="left">

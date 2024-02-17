@@ -22,7 +22,7 @@ const About = () => {
   ];
   const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className={`about ${isDark ? "darkMode" : ""}`}>
+    <div className={`about ${isDark ? "darktheme" : "lighttheme"}`}>
       <h1>About Me</h1>
       <section>
         <section className="sectionLeft">
@@ -45,7 +45,11 @@ const About = () => {
           <div>
             {skills.map((item, index) => {
               return (
-                <div key={index} className="skills">
+                <div
+                  key={index}
+                  className={`skills ${!isDark ? "darktheme" : "lighttheme"}`}
+                  style={{ transition: `all ease-in  ${index / 10}s` }}
+                >
                   {item}
                 </div>
               );

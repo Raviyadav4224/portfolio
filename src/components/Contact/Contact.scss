@@ -42,6 +42,7 @@
           padding: 0.5rem 1rem;
           border-radius: 5px;
           outline: transparent;
+          background-color: #e3e3e3;
 
           &:focus {
             outline: 0.5px solid black;
@@ -83,26 +84,6 @@
         > img {
           height: 3.5rem;
           width: 3.5rem;
-        }
-      }
-    }
-  }
-}
-
-.darkMode {
-  background-color: globalVar.$bgColorDarkMode;
-  .container {
-    .left {
-      > form {
-        > input,
-        textArea {
-          &:focus {
-            outline: 0.5px solid globalVar.$textColorDarkMode;
-          }
-        }
-        > button {
-          background-color: globalVar.$textColorDarkMode;
-          color: globalVar.$bgColorDarkMode;
         }
       }
     }

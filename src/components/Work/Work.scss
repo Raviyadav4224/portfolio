@@ -19,12 +19,6 @@
   }
 }
 
-.darkMode{
-  background-color: globalVar.$bgColorDarkMode;
-  >h1{
-    color: globalVar.$textColorDarkMode;
-  }
-}
 @media screen and (max-width: 885px) {
   .work {
     > h1 {

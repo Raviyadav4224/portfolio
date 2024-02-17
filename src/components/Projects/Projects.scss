@@ -72,8 +72,7 @@
   }
 }
 
-.darkModeProject {
-  background-color: globalVar.$bgColorDarkMode;
+.darktheme {
   >h1{
     color: globalVar.$textColorDarkMode;
 
@@ -89,7 +88,6 @@
       }
       color: globalVar.$textColorDarkMode;
     }
-    background-color: globalVar.$bgColorDarkMode;
   }
 }
 

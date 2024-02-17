@@ -10,11 +10,6 @@ footer{
     font-weight: lighter;
     position: relative;
 }
-.darkMode{
-    >div{
-        color: globalVar.$textColorDarkMode;
-    }
-}
 
 @media screen and (max-width:750px){
     footer{

@@ -12,8 +12,31 @@ import LightMode from "../Icons/LightMode";
 const Header = ({ toggleSidebar, setToggleSidebar }) => {
   const dispatch = useDispatch();
   const { isDark } = useSelector((state) => state.darkMode);
+  const navbarItems = [
+    {
+      title: "Kumar",
+      path: "/",
+    },
+    {
+      title: "About",
+      path: "/about",
+    },
+
+    {
+      title: "Work",
+      path: "/work",
+    },
+    {
+      title: "Projects",
+      path: "/projects",
+    },
+    {
+      title: "Contact",
+      path: "/contact",
+    },
+  ];
   return (
-    <nav className={`${isDark ? "darkMode" : ""}`}>
+    <nav className={`${isDark ? "darktheme" : "lighttheme"}`}>
       <div className="menu">
         {toggleSidebar ? (
           <AiOutlineClose onClick={() => setToggleSidebar(!toggleSidebar)} />
@@ -21,22 +44,18 @@ const Header = ({ toggleSidebar, setToggleSidebar }) => {
           <AiOutlineMenu onClick={() => setToggleSidebar(!toggleSidebar)} />
         )}
       </div>
-      <div className="left">
-        <NavLink className="logo" to="/">
-          Kumar.
-        </NavLink>
-        <NavLink className="info" to="/about">
-          About
-        </NavLink>
-        <NavLink className="info" to="/Work">
-          Work{" "}
-        </NavLink>
-        <NavLink className="info" to="/projects">
-          Projects
-        </NavLink>
-        <NavLink className="info" to="/contact">
-          Contact
-        </NavLink>
+      <div className={`left `}>
+        {navbarItems.map((item, index) => (
+          <NavLink
+            key={item?.title}
+            className={`${index === 0 ? "logo" : "info"} ${
+              isDark ? "darktheme" : "lighttheme"
+            }`}
+            to={item?.path}
+          >
+            {item?.title}
+          </NavLink>
+        ))}
       </div>
       <div className="right">
         <Github

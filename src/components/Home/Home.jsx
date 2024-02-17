@@ -5,9 +5,8 @@ import resume from "../../assets/developerImage/ResumeFrontEndDeveloper.pdf";
 import { useSelector } from "react-redux";
 const Home = () => {
   const { isDark } = useSelector((state) => state.darkMode);
-
   return (
-    <div className={`hero ${isDark ? "darkMode" : ""}`}>
+    <div className={`hero ${isDark ? "darktheme" : "lighttheme"}`}>
       <section className="section1">
         {/* <video  src={developerPic}  muted autoPlay loop alt="" ></video> */}
         <img src={developerPic} alt="" />

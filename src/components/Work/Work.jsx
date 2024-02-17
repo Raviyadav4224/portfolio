@@ -33,7 +33,7 @@ const Work = () => {
   ];
   const { isDark } = useSelector((state) => state.darkMode);
   return (
-    <div className={`work ${isDark ? "darkMode" : ""}`}>
+    <div className={`work ${isDark ? "darktheme" : "lighttheme"}`}>
       <h1>Work & Education</h1>
           {timelineData?.map((item, index) => {
             return (

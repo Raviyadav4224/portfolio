@@ -19,16 +19,16 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    .theme {
-      color: #ffffff;
-      background-color: #0c0c0c;
+    .darktheme {
+      color: #f5f5f5;
+      background-color: #1b1b1b;
+      transition: all ease-in 0.8s;
     }
   }
-  @media (prefers-color-scheme: light) {
-    .theme {
-      background-color: #ffffff;
-      color: #696969;
-    }
+  .lighttheme {
+    color: #000000;
+    background-color: #ffffff;
+    transition: all ease-in 0.8s;
   }
 }
 
