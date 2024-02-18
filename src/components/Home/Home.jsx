@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.scss";
 import developerPic from "../../assets/developerImage/profilePic1.jpg";
-import resume from "../../assets/developerImage/ResumeFrontEndDeveloper.pdf";
+import resume from "../../assets/developerImage/Ravi Kumar.pdf";
 import { useSelector } from "react-redux";
 const Home = () => {
   const { isDark } = useSelector((state) => state.darkMode);
