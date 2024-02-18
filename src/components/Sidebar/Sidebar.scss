@@ -2,8 +2,8 @@
 .sidebar {
   height: 90vh;
   width: 30vw;
-  z-index: 999;
   background-color: orange;
+  z-index: 999;
   position: absolute;
   border-radius: 0 15px 15px 0;
   display: flex;
@@ -18,20 +18,14 @@
   }
 }
 .isHidden {
-  // left: -100%;
-  // transition: all ease-in 0.3s;
+  left: -100%;
+  transition: all ease-in 0.3s;
 }
 .isShow {
-  // left: 0%;
-  // transition: all ease-in 0.3s;
+  left: 0%;
+  transition: all ease-in 0.3s;
 }
 
-.darkMode {
-  background-color: globalVar.$bgColorDarkMode;
-  > a {
-    color: globalVar.$textColorDarkMode;
-  }
-}
 @media screen and (max-width: 885px) {
   .sidebar {
     position: fixed;

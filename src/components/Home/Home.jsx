@@ -12,11 +12,16 @@ const Home = () => {
         <img src={developerPic} alt="" />
       </section>
       <section className="section2">
-        <h1>Turning Vision Into Reality With Code And Design. </h1>
+        <h1>{
+          ['Turning', 'Vision', 'Into', 'Reality', 'With', 'Code', 'And', 'Design.']
+          .map((item,index)=><span style={{transition: `all ease-in  ${index / 50}s`}} key={index}>{item} </span>)
+          } </h1>
         <p>
-          As a skilled full-stack developer, I am dedicated to turning ideas
-          into innovative web applications. Explore my latest projects and
-          articles, showcasing my expertise in React.js and web development.
+
+        {
+          ['', 'As', 'a', 'skilled', 'full-stack', 'developer,', 'I', 'am', 'dedicated', 'to', 'turning', 'ideas', 'into', 'innovative', 'web', 'applications.', 'Explore', 'my', 'latest', 'projects', 'and', 'articles,', 'showcasing', 'my', 'expertise', 'in', 'React.js', 'and', 'web', 'development.']
+          .map((item,index)=><span style={{transition: `all ease-in  ${index / 50}s`}} key={index}>{item} </span>)
+        }
         </p>
         <div className="buttonLinks">
           <a href={resume} title="Resume" rel="noreferrer" target="_blank">
