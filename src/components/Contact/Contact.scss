@@ -11,7 +11,7 @@
   line-height: 25px;
   position: relative;
   top: 10vh;
-  
+
   > h1 {
     font-size: 2.8rem;
     padding: 2rem;
@@ -93,6 +93,9 @@
 @media screen and (max-width: 885px) {
   .contact {
     padding: 2rem 2rem;
+    > h1 {
+      font-size: 2rem;
+    }
     .container {
       .left,
       .right {

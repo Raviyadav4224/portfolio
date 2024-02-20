@@ -86,6 +86,7 @@
 
 .darkModeTimeline{
   >div{
+    transition: all ease-in 0.8s;
     background-color: #303134;
     border-radius: 8px;
   }
