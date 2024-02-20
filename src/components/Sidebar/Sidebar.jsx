@@ -13,7 +13,7 @@ const Sidebar = ({ toggleSidebar, setToggleSidebar }) => {
   return (
       <div
         className={`sidebar ${toggleSidebar ? "isShow" : "isHidden"} ${
-          !isDark ? "darktheme" : "lightheme"
+          !isDark ? "darktheme" : "lighttheme"
         }`}
       >
         <NavLink className="" to="/about" onClick={closeSidebar}>
