@@ -64,7 +64,7 @@ const Contact = () => {
               rows={10}
               placeholder="Message"
               name="message"
-              maxLength={150}
+              maxLength={500}
             />
             <button type="submit">Let's Connect</button>
           </form>
