@@ -9,17 +9,9 @@ import Work from "./components/Work/Work";
 import Contact from "./components/Contact/Contact";
 import "./App.scss";
 import Sidebar from "./components/Sidebar/Sidebar";
+import { Toaster } from "react-hot-toast";
 const App = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
-
-  // definining a HOC
-  // const addDarkMode = (Component) => {
-  //   const DarkComponent = () => {
-  //     return <Component isDark={isDark} setIsDark={setIsDark} />;
-  //   };
-  //   return DarkComponent;
-  // };
-  // const HomeWithDarkMode = addDarkMode(Home);
   return (
     <>
       <BrowserRouter>
@@ -39,6 +31,16 @@ const App = () => {
           <Route path="/work" element={<Work />} />
         </Routes>
         <Footer />
+        <Toaster
+          toastOptions={{
+            success: {
+              duration: 2000,
+            },
+            error: {
+              duration: 4000,
+            },
+          }}
+        />
       </BrowserRouter>
     </>
   );

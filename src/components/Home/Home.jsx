@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <div className={`hero ${isDark ? "darktheme" : "lighttheme"}`}>
       <section className="section1">
-        {/* <video  src={developerPic}  muted autoPlay loop alt="" ></video> */}
         <img src={developerPic} alt="" />
       </section>
       <section className="section2">
@@ -72,7 +71,7 @@ const Home = () => {
           ))}
         </p>
         <div
-          className={`buttonLinks ${!isDark?"darktheme":"lighttheme"}`}
+          className={`buttonLinks ${!isDark ? "darktheme" : "lighttheme"}`}
           onClick={() =>
             window.open(
               "https://docs.google.com/document/d/1tZz-eqa3EQC_g8rr8h2NSgTrVHCE5Qb7Tz3empOKeFM/edit?usp=sharing"

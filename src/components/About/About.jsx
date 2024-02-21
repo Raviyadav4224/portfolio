@@ -2,9 +2,6 @@ import React from "react";
 import "./About.scss";
 import { useSelector } from "react-redux";
 const About = () => {
-  // const skills = [
-  //   "React Js, Javascript, Css,Git ,HTML,Node Js, Framer Motion, JWT",
-  // ];
   const skills = [
     "React Js",
     "Javascript",
