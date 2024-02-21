@@ -47,13 +47,24 @@ const Contact = () => {
       <div className="container">
         <div className="left">
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Name" name="user_name" />
-            <input type="email" placeholder="Email" name="user_email" />
+            <input
+              type="text"
+              placeholder="Name"
+              name="user_name"
+              maxLength={30}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              name="user_email"
+              maxLength={30}
+            />
             <textarea
               type="text"
               rows={10}
               placeholder="Message"
               name="message"
+              maxLength={150}
             />
             <button type="submit">Let's Connect</button>
           </form>
