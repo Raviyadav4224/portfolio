@@ -5,6 +5,7 @@ import location from "../../assets/icons/location.svg";
 import { useSelector } from "react-redux";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import useScrollTop from "../../misc/useScrollTop";
 const Contact = () => {
   const { isDark } = useSelector((state) => state.darkMode);
   const handleSubmit = (event) => {
@@ -41,6 +42,7 @@ const Contact = () => {
       });
     event.target.reset();
   };
+  useScrollTop()
   return (
     <div className={`contact ${isDark ? "darktheme" : "lighttheme"}`}>
       <h1>Contact Me</h1>
@@ -52,12 +54,14 @@ const Contact = () => {
               placeholder="Name"
               name="user_name"
               maxLength={30}
+              required
             />
             <input
               type="email"
               placeholder="Email"
               name="user_email"
               maxLength={30}
+              required
             />
             <textarea
               type="text"
@@ -65,6 +69,7 @@ const Contact = () => {
               placeholder="Message"
               name="message"
               maxLength={500}
+              required
             />
             <button type="submit">Let's Connect</button>
           </form>

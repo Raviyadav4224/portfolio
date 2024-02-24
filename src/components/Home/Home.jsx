@@ -2,8 +2,10 @@ import React from "react";
 import "./Home.scss";
 import developerPic from "../../assets/developerImage/profilePic1.jpg";
 import { useSelector } from "react-redux";
+import useScrollTop from "../../misc/useScrollTop";
 const Home = () => {
   const { isDark } = useSelector((state) => state.darkMode);
+  useScrollTop()
   return (
     <div className={`hero ${isDark ? "darktheme" : "lighttheme"}`}>
       <section className="section1">

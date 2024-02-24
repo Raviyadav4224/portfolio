@@ -5,6 +5,7 @@ import project2 from "../../assets/developerImage/project2.png";
 import project3 from "../../assets/developerImage/project3.png";
 import { useSelector } from "react-redux";
 import Github from "../Icons/Github";
+import useScrollTop from "../../misc/useScrollTop";
 const Projects = () => {
   const projectList = [
     {
@@ -27,6 +28,7 @@ const Projects = () => {
     },
   ];
   const { isDark } = useSelector((state) => state.darkMode);
+  useScrollTop()
   return (
     <div className={`projects ${isDark ? "darktheme" : "lighttheme"}`}>
       <h1>My Projects</h1>

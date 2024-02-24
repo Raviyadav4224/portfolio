@@ -4,6 +4,7 @@ import suitcase from "../../assets/icons/suitcase.svg";
 import cap from "../../assets/icons/cap.svg";
 import Timeline from "../Timeline/Timeline";
 import { useSelector } from "react-redux";
+import useScrollTop from "../../misc/useScrollTop";
 const Work = () => {
   const timelineData = [
     {
@@ -32,6 +33,7 @@ const Work = () => {
     },
   ];
   const { isDark } = useSelector((state) => state.darkMode);
+  useScrollTop()
   return (
     <div className={`work ${isDark ? "darktheme" : "lighttheme"}`}>
       <h1>Work & Education</h1>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.scss";
 import { useSelector } from "react-redux";
+import useScrollTop from "../../misc/useScrollTop";
 const About = () => {
   const skills = [
     "React Js",
@@ -18,6 +19,8 @@ const About = () => {
     "Docker",
   ];
   const { isDark } = useSelector((state) => state.darkMode);
+
+  useScrollTop();
   return (
     <div className={`about ${isDark ? "darktheme" : "lighttheme"}`}>
       <h1>About Me</h1>
