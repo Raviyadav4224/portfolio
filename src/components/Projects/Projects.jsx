@@ -3,6 +3,7 @@ import "./Projects.scss";
 import project1 from "../../assets/developerImage/project1.png";
 import project2 from "../../assets/developerImage/project2.png";
 import project3 from "../../assets/developerImage/project3.png";
+import project4 from "../../assets/developerImage/project4.png";
 import { useSelector } from "react-redux";
 import Github from "../Icons/Github";
 import useScrollTop from "../../misc/useScrollTop";
@@ -26,16 +27,25 @@ const Projects = () => {
       projectURL: "https://raviyadav4224.github.io/MagicNotes/",
       imageURL: project3,
     },
+    {
+      title: "Puzzle Cube",
+      desc: "Fun puzzle game to solve using React",
+      projectURL: "https://puzzlecube.onrender.com",
+      imageURL: project4,
+    },
   ];
   const { isDark } = useSelector((state) => state.darkMode);
-  useScrollTop()
+  useScrollTop();
   return (
     <div className={`projects ${isDark ? "darktheme" : "lighttheme"}`}>
       <h1>My Projects</h1>
       <div className="cards">
         {projectList.map((item, index) => {
           return (
-            <div className={`card ${isDark ? "darktheme" : "lighttheme"}`} key={index}>
+            <div
+              className={`card ${isDark ? "darktheme" : "lighttheme"}`}
+              key={index}
+            >
               <img
                 src={item.imageURL}
                 alt=""
