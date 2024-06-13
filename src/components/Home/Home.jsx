@@ -76,7 +76,7 @@ const Home = () => {
           className={`buttonLinks ${!isDark ? "darktheme" : "lighttheme"}`}
           onClick={() =>
             window.open(
-              "https://docs.google.com/document/d/1tZz-eqa3EQC_g8rr8h2NSgTrVHCE5Qb7Tz3empOKeFM/edit?usp=sharing"
+              "https://drive.google.com/file/d/174K45ZiSm73HKY997XhX1d31n-DuS03q/view?usp=drive_link"
             )
           }
         >
