@@ -76,7 +76,7 @@ const Home = () => {
           className={`buttonLinks ${!isDark ? "darktheme" : "lighttheme"}`}
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1deIn-P9vQQlYKXGRE_JRY88Dbz8rDt0x/view?usp=drive_link"
+              process.env.REACT_APP_PORTFOLIO_LINK
             )
           }
         >
