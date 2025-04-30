@@ -1,7 +1,7 @@
 import React from "react";
 import "./Projects.scss";
-import project1 from "../../assets/developerImage/project1.png";
-import project2 from "../../assets/developerImage/project2.png";
+import project1 from "../../assets/developerImage/project1.jpg";
+import project2 from "../../assets/developerImage/project2.jpg";
 import project3 from "../../assets/developerImage/project3.png";
 import project4 from "../../assets/developerImage/project4.png";
 import project5 from "../../assets/developerImage/project5.png";
