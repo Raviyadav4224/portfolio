@@ -1,3 +1,4 @@
+import { userdata } from "../../assets/data";
 import developerPic from "../../assets/developerImage/profilePic1.jpg";
 import { useSelector } from "react-redux";
 
@@ -10,16 +11,7 @@ const Home = () => {
       </section>
       <section className="section2">
         <h1>
-          {[
-            "Turning",
-            "Vision",
-            "Into",
-            "Reality",
-            "With",
-            "Code",
-            "And",
-            "Design.",
-          ].map((item, index) => (
+          {userdata?.heading?.title.map((item, index) => (
             <span
               style={{ transition: `all ease-in  ${index / 50}s` }}
               key={index}
@@ -29,38 +21,7 @@ const Home = () => {
           ))}{" "}
         </h1>
         <p>
-          {[
-            "",
-            "As",
-            "a",
-            "skilled",
-            "full-stack",
-            "developer,",
-            "I",
-            "am",
-            "dedicated",
-            "to",
-            "turning",
-            "ideas",
-            "into",
-            "innovative",
-            "web",
-            "applications.",
-            "Explore",
-            "my",
-            "latest",
-            "projects",
-            "and",
-            "articles,",
-            "showcasing",
-            "my",
-            "expertise",
-            "in",
-            "React.js",
-            "and",
-            "web",
-            "development.",
-          ].map((item, index) => (
+          {userdata?.heading?.desc.map((item, index) => (
             <span
               style={{ transition: `all ease-in  ${index / 50}s` }}
               key={index}

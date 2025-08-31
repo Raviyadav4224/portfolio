@@ -6,6 +6,50 @@ import project3 from "../assets/developerImage/project3.png";
 import project4 from "../assets/developerImage/project4.png";
 import project5 from "../assets/developerImage/project5.png";
 export const userdata = {
+  heading: {
+    title: [
+      "Turning",
+      "Vision",
+      "Into",
+      "Reality",
+      "With",
+      "Code",
+      "And",
+      "Design.",
+    ],
+    desc: [
+      "",
+      "As",
+      "a",
+      "skilled",
+      "full-stack",
+      "developer,",
+      "I",
+      "am",
+      "dedicated",
+      "to",
+      "turning",
+      "ideas",
+      "into",
+      "innovative",
+      "web",
+      "applications.",
+      "Explore",
+      "my",
+      "latest",
+      "projects",
+      "and",
+      "articles,",
+      "showcasing",
+      "my",
+      "expertise",
+      "in",
+      "React.js",
+      "and",
+      "web",
+      "development.",
+    ],
+  },
   navbarItems: [
     {
       title: "Kumar",
@@ -88,25 +132,36 @@ export const userdata = {
     },
   ],
   skills: [
-    "React Js",
-    "Javascript",
-    "Css",
-    "Git",
     "HTML",
+    "CSS",
+    "Javascript (ES6+)",
+    "React Js",
+    "Redux Toolkit",
+    "Responsive UI/UX",
     "Node Js",
-    "Framer Motion",
-    "JWT",
     "Java",
+    "Spring",
     "Springboot",
+    "JDBC",
     "Hibernate",
-    "Jenkins",
+    "Spring Data JPA",
+    "Spring Security",
+    "RESTful APIs",
+    "MySQL",
     "Docker",
+    "Jenkins",
+    "Git",
+    "JWT",
   ],
   about: `I'm a Full Stack Developer from Durgapur, West Bengal,India. I'm a
-  self-motivated, enthusiastic, goal-oriented individual with 2+
+  self-motivated, enthusiastic, goal-oriented individual with ${
+    new Date().getFullYear() - 2021
+  }+
   years of experience building and maintaing responsive websites.
   Currently I'm working in TCS as a Full Stack developer.`,
-  about_tech: `I build websites with a focus on React, Redux, JavaScript. I enjoy turning complex problems into simple and beautiful designs.`,
+  about_tech: `Proficient in building responsive UIs using React.js and
+developing robust backend APIs with Spring Boot, Spring Data
+JPA, Hibernate, and MySQL.`,
   socialMediaLinks: {
     github: "https://github.com/Raviyadav4224",
     linkedin: "https://www.linkedin.com/in/ravi-kumar-bb7111260/",

@@ -8,7 +8,7 @@ const Projects = () => {
       id="projects"
       className={`projects ${isDark ? "darktheme" : "lighttheme"}`}
     >
-      <h1>My Projects</h1>
+      <h1 className="heading">My Projects</h1>
       <div className="cards">
         {userdata?.projectList.map((item, index) => {
           return (

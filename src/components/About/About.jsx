@@ -5,7 +5,7 @@ const About = () => {
 console.log("isDark About",isDark)
   return (
     <div id="about" className={`about ${isDark ? "darktheme" : "lighttheme"}`}>
-      <h1>About Me</h1>
+      <h1 className="heading">About Me</h1>
       <section>
         <section className="sectionLeft">
           <h3>GET TO KNOW ME!</h3>

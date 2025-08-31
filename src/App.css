@@ -50,12 +50,22 @@ body {
 
 /* Replacing SCSS variables with actual values */
 :root {
-  --bgColorDarkMode: #020817;
-  --textColorDarkMode: #F8FAFC;
-  --bgColorLightMode: #FFFFFF;
-  --textColorLightMode: #020817;
+  --bgColorDarkMode: #1e092e; /* Deep dark purple */
+  --textColorDarkMode: #e0d0e3; /* Light lilac */
+  --primaryColor: #ffd700; /* Gold */
+  /* --secondaryColor: #9b59b6; Medium purple */
+
+  /* Light mode - Off-white background with deeper purple accents */
+  --bgColorLightMode: #f4f2f7; /* Very light purple/gray */
+  --textColorLightMode: #301934; /* Deep purple */
+  /* --primaryColor: #8a2be2; Blue-violet */
+  --secondaryColor: #c084fc; /* Light purple */
 }
 
+.heading {
+  font-size: 2rem;
+  padding: 1.6rem;
+}
 
 .about {
   min-height: 100vh;
@@ -69,11 +79,6 @@ body {
   position: relative;
   top: 10vh;
   box-sizing: border-box;
-}
-
-.about > h1 {
-  font-size: 2.8rem;
-  padding: 2rem;
 }
 
 .about > section {
@@ -137,18 +142,16 @@ body {
 }
 
 .about > section .skills:hover {
-  background-color: chartreuse;
-  transition: all ease-in 0.3s;
+  background-color: var(--primaryColor);
+  transform: scale(1.1);
+  transition: transform ease-in 0.3s;
+  cursor: pointer;
 }
 
 /* Responsive */
 @media screen and (max-width: 885px) {
   .about {
-    padding: 2rem 2rem;
-  }
-
-  .about > h1 {
-    font-size: 2rem;
+    padding: 2rem 1rem;
   }
 
   .about > section {
@@ -174,8 +177,6 @@ body {
 }
 
 .projects > h1 {
-  font-size: 3.8rem;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,11 +250,7 @@ body {
 /* Responsive */
 @media screen and (max-width: 885px) {
   .projects {
-    padding: 0;
-  }
-
-  .projects > h1 {
-    font-size: 2rem;
+    padding: 2rem 1rem;
   }
 }
 .work {
@@ -266,23 +263,14 @@ body {
 }
 
 .work > h1 {
-  font-size: 2.8rem;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Responsive */
-@media screen and (max-width: 885px) {
-  .work > h1 {
-    font-size: 2rem;
-  }
-}
-
 @media screen and (max-width: 725px) {
   .work {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
 }
 
@@ -305,6 +293,7 @@ body {
   right: 0;
   z-index: -1;
   background-color: #d9d9d9;
+  top: 2px;
 }
 
 .timeline > div {
@@ -350,6 +339,7 @@ body {
   left: -6px;
   z-index: -1;
   background-color: #d9d9d9;
+  top: 2px;
 }
 
 .timelineRight > div {
@@ -387,6 +377,7 @@ body {
 
   .timeline::after {
     left: 17px;
+    top: 2px;
   }
 
   .timeline > div > img {
@@ -425,8 +416,8 @@ body {
 
 .hero .section1 img,
 .hero .section1 video {
-  height: 26rem;
-  width: 24rem;
+  height: 20rem;
+  width: 20rem;
   border-radius: 100%;
 }
 
@@ -442,13 +433,15 @@ body {
 
 .hero .section2 h1 {
   margin: 1rem 0;
-  font-size: 3.2rem;
+  font-size: 3rem;
+  padding: 0 2rem;
 }
 
 .hero .section2 p {
   margin: 1rem 0;
   font-size: 1.2rem;
   font-weight: 300;
+  padding: 0 2rem;
 }
 
 /* Button Links */
@@ -457,7 +450,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 1rem auto;
   padding: 0.7rem 0.5rem;
   border-radius: 5px;
   cursor: pointer;
@@ -519,7 +512,7 @@ nav {
   bottom: -10px;
   width: 0%;
   height: 3px;
-  background-color: #f76d57;
+  background-color: var(--primaryColor);
   border-radius: 5px;
 }
 
@@ -593,11 +586,6 @@ nav {
   padding: 2rem 4rem;
   line-height: 25px;
   position: relative;
-}
-
-.contact > h1 {
-  font-size: 2.8rem;
-  padding: 2rem;
 }
 
 .contact .container {
@@ -677,11 +665,6 @@ nav {
   .contact {
     padding: 2rem;
   }
-
-  .contact > h1 {
-    font-size: 2rem;
-  }
-
   .contact .container .left,
   .contact .container .right {
     width: 100%;

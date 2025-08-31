@@ -23,7 +23,7 @@ const BottomNav = () => {
       <a href="#hero" data-tooltip="Home">
         <FaHome />
       </a>
-      <a href="#about" data-tooltip="Work">
+      <a href="#about" data-tooltip="About">
         <FaBriefcase />
       </a>
       <a href="#projects" data-tooltip="Projects">
@@ -56,7 +56,7 @@ const BottomNav = () => {
       <a
         href="#"
         onClick={() => dispatch(toggleDarkMode(isDark))}
-        data-tooltip="Toggle Dark Mode"
+        data-tooltip="Change Theme"
       >
         <FaMoon />
       </a>
