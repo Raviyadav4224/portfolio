@@ -1,4 +1,3 @@
-import "./Timeline.scss";
 const Timeline = (props) => {
   return (
     <div

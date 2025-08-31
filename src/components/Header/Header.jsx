@@ -1,4 +1,3 @@
-import "./Header.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../../redux/actions";
 import Github from "../Icons/Github";

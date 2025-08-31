@@ -1,4 +1,3 @@
-import "./Home.scss";
 import developerPic from "../../assets/developerImage/profilePic1.jpg";
 import { useSelector } from "react-redux";
 

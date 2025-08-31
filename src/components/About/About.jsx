@@ -1,4 +1,3 @@
-import "./About.scss";
 import { useSelector } from "react-redux";
 import { userdata } from "../../assets/data";
 const About = () => {

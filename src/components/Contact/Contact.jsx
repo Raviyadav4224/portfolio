@@ -1,4 +1,3 @@
-import "./Contact.scss";
 import email from "../../assets/icons/email.svg";
 import location from "../../assets/icons/location.svg";
 import { useSelector } from "react-redux";

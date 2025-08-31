@@ -1,6 +1,3 @@
-import React from "react";
-import "./Projects.scss";
-
 import { useSelector } from "react-redux";
 import Github from "../Icons/Github";
 import { userdata } from "../../assets/data";

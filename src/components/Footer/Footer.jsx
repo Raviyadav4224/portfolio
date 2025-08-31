@@ -1,5 +1,3 @@
-import React from "react";
-import "./Footer.scss";
 import { useSelector } from "react-redux";
 const Footer = () => {
   const { isDark } = useSelector((state) => state.darkMode);

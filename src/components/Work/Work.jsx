@@ -1,4 +1,3 @@
-import "./Work.scss";
 import Timeline from "../Timeline/Timeline";
 import { useSelector } from "react-redux";
 import { userdata } from "../../assets/data";
