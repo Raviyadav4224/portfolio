@@ -3,13 +3,13 @@
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: none;
+  display: none; /* hidden by default, show on mobile */
   justify-content: space-around;
   align-items: center;
-  width: auto;
-  padding: 12px 18px;
+  width: fit-content;
+  padding: 10px 14px;
   border-radius: 50px;
-  background: rgba(17, 24, 39, 0.9);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   z-index: 999;
@@ -17,22 +17,21 @@
   transition: transform 0.3s ease-in-out, background 0.3s ease, color 0.3s ease;
 }
 
-/* Light mode */
+/* Light & Dark mode */
 .bottom-nav.light {
-  background: rgba(255, 255, 255, 0.9);
   color: #000;
+  background: rgba(255, 255, 255, 0.6);
 }
-
-/* Dark mode */
 .bottom-nav.dark {
-  background: rgba(0, 0, 0, 0.9);
   color: #fff;
+  background: rgba(30, 30, 30, 0.6);
 }
 
-/* Show only on mobile (≤885px) */
+/* Show bottom nav on smaller screens */
 @media (max-width: 885px) {
   .bottom-nav {
     display: flex;
+    padding: 8px 12px;
   }
 }
 
@@ -41,22 +40,22 @@
 .bottom-nav span {
   color: inherit;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 10px;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
-  position: relative; /* needed for tooltip */
+  position: relative;
   cursor: pointer;
 }
 
-/* Normalize all icons (React Icons + custom SVGs) */
+/* Normalize icons */
 .bottom-nav a svg,
 .bottom-nav span svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 
@@ -65,7 +64,7 @@
 .bottom-nav span:hover {
   background: rgba(59, 130, 246, 0.2);
   color: #3b82f6;
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
 /* Tooltip styling */
@@ -109,4 +108,26 @@
 .bottom-nav span:hover::before {
   opacity: 1;
   transform: translateX(-50%) translateY(-2px);
+}
+
+/* Smaller screens adjustments */
+@media (max-width: 480px) {
+  .bottom-nav{
+    gap: 6px;
+  }
+  .bottom-nav a,
+  .bottom-nav span {
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  .bottom-nav a svg,
+  .bottom-nav span svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .bottom-nav::after {
+    bottom: 40px;
+  }
 }

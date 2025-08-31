@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { userdata } from "../../assets/data";
 const About = () => {
   const { isDark } = useSelector((state) => state.darkMode);
-
+console.log("isDark About",isDark)
   return (
     <div id="about" className={`about ${isDark ? "darktheme" : "lighttheme"}`}>
       <h1>About Me</h1>
