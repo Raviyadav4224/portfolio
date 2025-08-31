@@ -55,7 +55,7 @@ const BottomNav = () => {
       {/* Dark mode toggle */}
       <a
         href="#"
-        onClick={() => dispatch(toggleDarkMode(!isDark))}
+        onClick={() => dispatch(toggleDarkMode(isDark))}
         data-tooltip="Toggle Dark Mode"
       >
         <FaMoon />

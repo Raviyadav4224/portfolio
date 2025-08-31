@@ -26,15 +26,15 @@
 
 @media (prefers-color-scheme: dark) {
   .darktheme {
-    color: #f5f5f5;
-    background-color: #181e2b;
+    color: var(--textColorDarkMode);
+    background-color: var(--bgColorDarkMode);
     transition: all ease-in 0.8s;
   }
 }
 
 .lighttheme {
-  color: #000000;
-  background-color: #ffffff;
+  color: var(--textColorLightMode);
+  background-color: var(--bgColorLightMode);
   transition: all ease-in 0.8s;
 }
 
@@ -50,11 +50,12 @@ body {
 
 /* Replacing SCSS variables with actual values */
 :root {
-  --bgColorDarkMode: #1b1b1b;
-  --textColorDarkMode: #f5f5f5;
+  --bgColorDarkMode: #020817;
+  --textColorDarkMode: #F8FAFC;
+  --bgColorLightMode: #FFFFFF;
+  --textColorLightMode: #020817;
 }
 
-/* Converted from SCSS — preserves original behaviour exactly (direct children, spacing, line-height, hover, etc.) */
 
 .about {
   min-height: 100vh;
