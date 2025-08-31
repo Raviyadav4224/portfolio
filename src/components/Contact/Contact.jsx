@@ -1,50 +1,20 @@
-import React from "react";
 import "./Contact.scss";
 import email from "../../assets/icons/email.svg";
 import location from "../../assets/icons/location.svg";
 import { useSelector } from "react-redux";
-import emailjs from "@emailjs/browser";
-import toast from "react-hot-toast";
-import useScrollTop from "../../misc/useScrollTop";
+import { sendEmail } from "../../misc/sendEmail";
 const Contact = () => {
   const { isDark } = useSelector((state) => state.darkMode);
   const handleSubmit = (event) => {
     event.preventDefault();
-    emailjs
-      .sendForm("service_t6abukk", "template_6xf8nmk", event.target, {
-        publicKey: "za4RdCgeVoeTx3pcY",
-      })
-      .then((res) => {
-        if (res?.status === 200) {
-          toast.success("Email sent successfully", {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: isDark ? "dark" : "light",
-          });
-        }
-      })
-      .catch(() => {
-        toast.error("Something went wrong", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: isDark ? "dark" : "light",
-        });
-      });
+    sendEmail(event.target, isDark);
     event.target.reset();
   };
-  useScrollTop()
   return (
-    <div className={`contact ${isDark ? "darktheme" : "lighttheme"}`}>
+    <div
+      id="contact"
+      className={`contact ${isDark ? "darktheme" : "lighttheme"}`}
+    >
       <h1>Contact Me</h1>
       <div className="container">
         <div className="left">

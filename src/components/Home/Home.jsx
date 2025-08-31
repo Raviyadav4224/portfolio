@@ -1,13 +1,11 @@
-import React from "react";
 import "./Home.scss";
 import developerPic from "../../assets/developerImage/profilePic1.jpg";
 import { useSelector } from "react-redux";
-import useScrollTop from "../../misc/useScrollTop";
+
 const Home = () => {
   const { isDark } = useSelector((state) => state.darkMode);
-  useScrollTop()
   return (
-    <div className={`hero ${isDark ? "darktheme" : "lighttheme"}`}>
+    <div id="hero" className={`hero ${isDark ? "darktheme" : "lighttheme"}`}>
       <section className="section1">
         <img src={developerPic} alt="" />
       </section>
@@ -74,11 +72,7 @@ const Home = () => {
         </p>
         <div
           className={`buttonLinks ${!isDark ? "darktheme" : "lighttheme"}`}
-          onClick={() =>
-            window.open(
-              process.env.REACT_APP_PORTFOLIO_LINK
-            )
-          }
+          onClick={() => window.open(process.env.REACT_APP_PORTFOLIO_LINK)}
         >
           Resume
         </div>

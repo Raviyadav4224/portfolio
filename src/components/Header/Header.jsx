@@ -1,7 +1,4 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Header.scss";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../../redux/actions";
 import Github from "../Icons/Github";
@@ -9,68 +6,40 @@ import Linkedin from "../Icons/Linkedin";
 import Instagram from "../Icons/Instagram";
 import DarkMode from "../Icons/DarkMode";
 import LightMode from "../Icons/LightMode";
-const Header = ({ toggleSidebar, setToggleSidebar }) => {
+import { userdata } from "../../assets/data";
+const Header = () => {
   const dispatch = useDispatch();
   const { isDark } = useSelector((state) => state.darkMode);
-  const navbarItems = [
-    {
-      title: "Kumar",
-      path: "/",
-    },
-    {
-      title: "About",
-      path: "/about",
-    },
 
-    {
-      title: "Work",
-      path: "/work",
-    },
-    {
-      title: "Projects",
-      path: "/projects",
-    },
-    {
-      title: "Contact",
-      path: "/contact",
-    },
-  ];
   return (
     <nav className={`${isDark ? "darktheme" : "lighttheme"}`}>
-      <div className="menu">
-        {toggleSidebar ? (
-          <AiOutlineClose onClick={() => setToggleSidebar(!toggleSidebar)} />
-        ) : (
-          <AiOutlineMenu onClick={() => setToggleSidebar(!toggleSidebar)} />
-        )}
-      </div>
       <div className={`left `}>
-        {navbarItems.map((item, index) => (
-          <NavLink
+        {userdata?.navbarItems.map((item, index) => (
+          <a
             key={item?.title}
             className={`${index === 0 ? "logo" : "info"} ${
               isDark ? "darktheme" : "lighttheme"
             }`}
-            to={item?.path}
+            href={`#${item?.path}`}
           >
             {item?.title}
-          </NavLink>
+          </a>
         ))}
       </div>
       <div className="right">
         <Github
-          onClick={() => window.open("https://github.com/Raviyadav4224")}
+          onClick={() => window.open(userdata?.socialMediaLinks?.github)}
           className="github info"
         />
         <Instagram
           onClick={() =>
-            window.open("https://www.instagram.com/ravi_kumar4224/")
+            window.open(userdata?.socialMediaLinks?.instagram)
           }
           className="instagram info"
         />
         <Linkedin
           onClick={() =>
-            window.open("https://www.linkedin.com/in/ravi-kumar-bb7111260/")
+            window.open(userdata?.socialMediaLinks?.linkedin)
           }
           className="linkedin info"
         />
