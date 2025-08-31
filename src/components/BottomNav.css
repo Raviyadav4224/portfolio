@@ -1,0 +1,112 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  padding: 12px 18px;
+  border-radius: 50px;
+  background: rgba(17, 24, 39, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  gap: 14px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode */
+.bottom-nav.light {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+/* Dark mode */
+.bottom-nav.dark {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+
+/* Show only on mobile (≤885px) */
+@media (max-width: 885px) {
+  .bottom-nav {
+    display: flex;
+  }
+}
+
+/* Icon wrapper */
+.bottom-nav a,
+.bottom-nav span {
+  color: inherit;
+  text-decoration: none;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  position: relative; /* needed for tooltip */
+  cursor: pointer;
+}
+
+/* Normalize all icons (React Icons + custom SVGs) */
+.bottom-nav a svg,
+.bottom-nav span svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+/* Hover effect */
+.bottom-nav a:hover,
+.bottom-nav span:hover {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  transform: scale(1.15);
+}
+
+/* Tooltip styling */
+.bottom-nav a::after,
+.bottom-nav span::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2937;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Tooltip arrow */
+.bottom-nav a::before,
+.bottom-nav span::before {
+  content: "";
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1f2937 transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.bottom-nav a:hover::after,
+.bottom-nav span:hover::after,
+.bottom-nav a:hover::before,
+.bottom-nav span:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+}

@@ -7,16 +7,18 @@ import Work from "./components/Work/Work";
 import Contact from "./components/Contact/Contact";
 import "./App.scss";
 import { Toaster } from "react-hot-toast";
+import BottomNav from "./components/BottomNav";
 const App = () => {
   return (
     <>
       <Header/>
       <Home />
-      <Projects />
       <About />
+      <Projects />
       <Work />
       <Contact />
       <Footer />
+      <BottomNav />
       <Toaster
         toastOptions={{
           success: {
