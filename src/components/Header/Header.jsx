@@ -44,6 +44,7 @@ const Header = () => {
         />
         {isDark ? (
           <LightMode
+            tabIndex={"0"}
             onClick={() => dispatch(toggleDarkMode(isDark))}
             className="lightModeSvg"
           />

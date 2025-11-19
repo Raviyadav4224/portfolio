@@ -5,7 +5,7 @@ const Work = () => {
   const { isDark } = useSelector((state) => state.darkMode);
   return (
     <div id="work" className={`work ${isDark ? "darktheme" : "lighttheme"}`}>
-      <h1 className="heading">Work & Education</h1>
+      <h1 className="heading" tabIndex={0}>Work & Education</h1>
       {userdata?.workTimeline?.map((item, index) => {
         return (
           <Timeline

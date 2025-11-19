@@ -8,7 +8,9 @@ const Projects = () => {
       id="projects"
       className={`projects ${isDark ? "darktheme" : "lighttheme"}`}
     >
-      <h1 className="heading">My Projects</h1>
+      <h1 className="heading" tabIndex={0}>
+        My Projects
+      </h1>
       <div className="cards">
         {userdata?.projectList.map((item, index) => {
           return (
@@ -20,6 +22,12 @@ const Projects = () => {
                 src={item.imageURL}
                 alt=""
                 onClick={() => window.open(item.projectURL)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") {
+                    window.open(item.projectURL);
+                  }
+                }}
+                tabIndex={0}
               />
               <h3>
                 {item.title}
@@ -28,6 +36,7 @@ const Projects = () => {
                   onClick={() =>
                     window.open("https://github.com/Raviyadav4224")
                   }
+                  tabIndex={0}
                 />
               </h3>
               <small>{item.desc}</small>

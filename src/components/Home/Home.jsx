@@ -4,6 +4,12 @@ import { useSelector } from "react-redux";
 
 const Home = () => {
   const { isDark } = useSelector((state) => state.darkMode);
+
+  const handleResume = (event) => {
+    if (event?.type === "click" || event.key === "Enter") {
+      window.open(process.env.REACT_APP_PORTFOLIO_LINK);
+    }
+  };
   return (
     <div id="hero" className={`hero ${isDark ? "darktheme" : "lighttheme"}`}>
       <section className="section1">
@@ -32,7 +38,9 @@ const Home = () => {
         </p>
         <div
           className={`buttonLinks ${!isDark ? "darktheme" : "lighttheme"}`}
-          onClick={() => window.open(process.env.REACT_APP_PORTFOLIO_LINK)}
+          onClick={(event) => handleResume(event)}
+          tabIndex={0}
+          onKeyDown={(event) => handleResume(event)}
         >
           Resume
         </div>

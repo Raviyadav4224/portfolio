@@ -14,7 +14,9 @@ const Contact = () => {
       id="contact"
       className={`contact ${isDark ? "darktheme" : "lighttheme"}`}
     >
-      <h1 className="heading">Contact Me</h1>
+      <h1 className="heading" tabIndex={"0"}>
+        Contact Me
+      </h1>
       <div className="container">
         <div className="left">
           <form onSubmit={handleSubmit}>

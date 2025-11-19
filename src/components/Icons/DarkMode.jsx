@@ -7,7 +7,13 @@ const DarkMode = (props) => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      onClick={()=>props.onClick()}
+      onClick={() => props.onClick()}
+      onKeyDown={(event) => {
+        if (event.key === "Enter") {
+          props?.onClick();
+        }
+      }}
+      tabIndex={0}
       {...props}
     >
       <g

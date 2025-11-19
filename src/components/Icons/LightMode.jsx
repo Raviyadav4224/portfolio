@@ -5,10 +5,16 @@ const LightMode = (props) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
+      tabIndex={0}
       height="1em"
       viewBox="0 0 24 24"
       {...props}
       onClick={() => props.onClick()}
+      onKeyDown={(event) => {
+        if (event.key === "Enter") {
+          props?.onClick();
+        }
+      }}
     >
       <rect x="0" y="0" width="24" height="24" fill="rgba(255, 255, 255, 0)" />
       <g

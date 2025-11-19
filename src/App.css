@@ -77,7 +77,6 @@ body {
   padding: 2rem 4rem;
   line-height: 25px;
   position: relative;
-  top: 10vh;
   box-sizing: border-box;
 }
 
@@ -173,7 +172,6 @@ body {
   letter-spacing: 1px;
   line-height: 25px;
   position: relative;
-  top: 10vh;
 }
 
 .projects > h1 {
@@ -259,7 +257,6 @@ body {
   letter-spacing: 1px;
   line-height: 25px;
   position: relative;
-  top: 10vh;
 }
 
 .work > h1 {
@@ -403,7 +400,7 @@ body {
   height: auto;
   display: flex;
   position: relative;
-  top: 10vh;
+  padding-top: 10vh;
 }
 
 /* Section 1 */

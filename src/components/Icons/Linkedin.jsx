@@ -7,8 +7,14 @@ const Linkedin = (props) => {
       xmlSpace="preserve"
       width={800}
       height={800}
+      tabIndex={0}
       viewBox="0 0 100 100"
       onClick={() => props.onClick()}
+      onKeyDown={(event) => {
+        if (event.key === "Enter") {
+          props?.onClick();
+        }
+      }}
       {...props}
     >
       <style>{".st83{fill:#f1f1f1}"}</style>
