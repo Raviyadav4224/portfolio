@@ -69,7 +69,7 @@ const siteConfig = {
   skillGroups: [
     {
       label: "Backend",
-      skills: ["Java 17", "Spring Boot 3", "Hibernate", "REST APIs", "Kafka"],
+      skills: ["Java 17", "Spring Boot 3", "Hibernate", "REST APIs", "Microservices", "Kafka"],
     },
     {
       label: "Frontend",
@@ -81,7 +81,7 @@ const siteConfig = {
     },
     {
       label: "Data",
-      skills: ["PostgreSQL", "MySQL", "pgvector"],
+      skills: ["MySQL", "PostgreSQL"],
     },
   ],
 
@@ -89,7 +89,7 @@ const siteConfig = {
   timeline: [
     {
       title: "TCS — Full Stack Developer",
-      year: "Present",
+      year: "2021 - Present",
       description:
         "Backend-focused full stack development on a nationwide Passport " +
         "Seva project for the Govt. of India, using Java, Spring Boot, " +
@@ -167,7 +167,6 @@ const siteConfig = {
   socials: {
     github: "https://github.com/Raviyadav4224",
     linkedin: "https://www.linkedin.com/in/ravi-kumar-bb7111260/",
-    instagram: "https://www.instagram.com/ravi_kumar4224/",
   },
 
   footer: {
