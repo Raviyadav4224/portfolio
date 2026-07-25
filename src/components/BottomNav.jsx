@@ -4,7 +4,6 @@ import {
   FolderOpen,
   GraduationCap,
   Github,
-  Instagram,
   Linkedin,
   Moon,
   Sun,
@@ -58,16 +57,6 @@ const BottomNav = () => {
           transition-colors hover:bg-accent-blue/10 hover:text-accent-blue"
       >
         <Github size={18} />
-      </a>
-      <a
-        href={siteConfig.socials.instagram}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Instagram"
-        className="rounded-full p-2.5 text-muted-light dark:text-muted-dark
-          transition-colors hover:bg-accent-blue/10 hover:text-accent-blue"
-      >
-        <Instagram size={18} />
       </a>
       <a
         href={siteConfig.socials.linkedin}
