@@ -1,65 +1,93 @@
 import {
-  FaHome,
-  FaBriefcase,
-  FaGraduationCap,
-  FaFolderOpen,
-  FaMoon,
-} from "react-icons/fa";
-import "./BottomNav.css";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleDarkMode } from "../redux/actions";
-import Github from "./Icons/Github";
-import Instagram from "./Icons/Instagram";
-import Linkedin from "./Icons/Linkedin";
-import { userdata } from "../assets/data";
+  Home,
+  User,
+  FolderOpen,
+  GraduationCap,
+  Github,
+  Instagram,
+  Linkedin,
+  Moon,
+  Sun,
+} from "lucide-react";
+import { useTheme } from "../context/ThemeContext.jsx";
+import siteConfig from "../config/site.config.js";
+
+const navIcons = {
+  hero: Home,
+  about: User,
+  projects: FolderOpen,
+  work: GraduationCap,
+};
 
 const BottomNav = () => {
-  const dispatch = useDispatch();
-  const { isDark } = useSelector((state) => state.darkMode);
+  const { isDark, toggleTheme } = useTheme();
+
+  // Only show the internal-page links here; "Contact" stays reachable via
+  // the desktop nav / scroll, keeping the mobile bar from getting cramped.
+  const links = siteConfig.nav.filter((item) => navIcons[item.path]);
 
   return (
-    <div className={`bottom-nav ${isDark ? "dark" : "light"}`}>
-      {/* Internal navigation */}
-      <a href="#hero" data-tooltip="Home">
-        <FaHome />
-      </a>
-      <a href="#about" data-tooltip="About">
-        <FaBriefcase />
-      </a>
-      <a href="#projects" data-tooltip="Projects">
-        <FaFolderOpen />
-      </a>
-      <a href="#work" data-tooltip="Education">
-        <FaGraduationCap />
-      </a>
+    <div
+      className="fixed bottom-5 left-1/2 z-50 flex -translate-x-1/2 items-center
+        gap-1 rounded-full border border-accent-blue/20 bg-surface-light/80
+        dark:bg-surface-dark/80 px-3 py-2 shadow-lg backdrop-blur-md md:hidden"
+    >
+      {links.map((item) => {
+        const Icon = navIcons[item.path];
+        return (
+          <a
+            key={item.path}
+            href={`#${item.path}`}
+            aria-label={item.title}
+            className="rounded-full p-2.5 text-muted-light dark:text-muted-dark
+              transition-colors hover:bg-accent-blue/10 hover:text-accent-blue"
+          >
+            <Icon size={18} />
+          </a>
+        );
+      })}
 
-      <span
-        onClick={() => window.open(userdata?.socialMediaLinks?.github, "_blank")}
-        data-tooltip="GitHub"
-      >
-        <Github />
-      </span>
-      <span
-        onClick={() => window.open(userdata?.socialMediaLinks?.instagram, "_blank")}
-        data-tooltip="Instagram"
-      >
-        <Instagram />
-      </span>
-      <span
-        onClick={() => window.open(userdata?.socialMediaLinks?.linkedin, "_blank")}
-        data-tooltip="LinkedIn"
-      >
-        <Linkedin />
-      </span>
+      <span className="mx-1 h-5 w-px bg-accent-blue/20" />
 
-      {/* Dark mode toggle */}
       <a
-        href="#"
-        onClick={() => dispatch(toggleDarkMode(isDark))}
-        data-tooltip="Change Theme"
+        href={siteConfig.socials.github}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="GitHub"
+        className="rounded-full p-2.5 text-muted-light dark:text-muted-dark
+          transition-colors hover:bg-accent-blue/10 hover:text-accent-blue"
       >
-        <FaMoon />
+        <Github size={18} />
       </a>
+      <a
+        href={siteConfig.socials.instagram}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Instagram"
+        className="rounded-full p-2.5 text-muted-light dark:text-muted-dark
+          transition-colors hover:bg-accent-blue/10 hover:text-accent-blue"
+      >
+        <Instagram size={18} />
+      </a>
+      <a
+        href={siteConfig.socials.linkedin}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="LinkedIn"
+        className="rounded-full p-2.5 text-muted-light dark:text-muted-dark
+          transition-colors hover:bg-accent-blue/10 hover:text-accent-blue"
+      >
+        <Linkedin size={18} />
+      </a>
+
+      <button
+        onClick={toggleTheme}
+        aria-label="Toggle dark mode"
+        className="rounded-full p-2.5 text-muted-light dark:text-muted-dark
+          transition-colors hover:bg-accent-blue/10 hover:text-accent-amber"
+      >
+        {isDark ? <Sun size={18} /> : <Moon size={18} />}
+      </button>
     </div>
   );
 };

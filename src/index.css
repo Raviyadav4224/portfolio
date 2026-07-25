@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* A tiny handful of things Tailwind utilities don't cover directly */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink dark:bg-blueprint-bg dark:text-slate-200
+      font-body antialiased transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* The blueprint grid background, reused across sections */
+  .bg-blueprint-grid {
+    @apply bg-grid-light dark:bg-grid-dark bg-grid;
+  }
+
+  /* "// comment"-style eyebrow label used above every section heading */
+  .section-label {
+    @apply font-mono text-sm text-accent-blue dark:text-accent-blue/90
+      tracking-wide mb-2 select-none;
+  }
+}
