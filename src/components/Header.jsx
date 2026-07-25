@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, Moon, Sun } from "lucide-react";
+import { Github, Linkedin, Moon, Sun } from "lucide-react";
 import { useTheme } from "../context/ThemeContext.jsx";
 import siteConfig from "../config/site.config.js";
 
@@ -52,15 +52,6 @@ const Header = () => {
           className="text-muted-light dark:text-muted-dark hover:text-accent-blue transition-colors"
         >
           <Github size={18} />
-        </a>
-        <a
-          href={siteConfig.socials.instagram}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Instagram"
-          className="text-muted-light dark:text-muted-dark hover:text-accent-blue transition-colors"
-        >
-          <Instagram size={18} />
         </a>
         <a
           href={siteConfig.socials.linkedin}
