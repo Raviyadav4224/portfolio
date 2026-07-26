@@ -11,6 +11,7 @@ import project4 from "../assets/images/project4.png";
 import project5 from "../assets/images/project5.png";
 import profilePic from "../assets/images/profilePic.jpg";
 
+const yoe=`${Math.floor((new Date() - new Date('2021-12-06')) / (1000 * 60 * 60 * 24 * 30.436875) / 12)}.${Math.floor(((new Date() - new Date('2021-12-06')) / (1000 * 60 * 60 * 24 * 30.436875)) % 12)}`
 const siteConfig = {
   meta: {
     name: "Ravi Kumar",
@@ -33,7 +34,7 @@ const siteConfig = {
   ],
 
   hero: {
-    titleLines: ["Turning", "Vision", "Into", "Reality", "With", "Code."],
+    titleLines: 'Electrical Engineer by Degree, Developer by Choice'.split(' '),
     description:
       "Backend-focused full stack developer building enterprise-scale " +
       "systems with Java, Spring Boot, Kafka, and Kubernetes — now growing " +
@@ -44,7 +45,7 @@ const siteConfig = {
   about: {
     intro:
       "I'm a Full Stack Developer (backend-focused) based in Kolkata, India, " +
-      "with close to 5 years of experience building and maintaining " +
+      `with close to ${yoe} years of experience building and maintaining ` +
       "enterprise-scale systems — including a nationwide passport issuance " +
       "platform. I care most about the backend: APIs, data, messaging, and " +
       "the infrastructure that keeps a system reliable under real load.",
@@ -56,7 +57,7 @@ const siteConfig = {
     // Freeform list of quick facts shown next to the intro. Add/remove freely.
     facts: [
       { label: "Location", value: "Kolkata, India" },
-      { label: "Experience", value: `${Math.floor((new Date() - new Date('2021-12-06')) / (1000 * 60 * 60 * 24 * 30.436875) / 12)}.${Math.floor(((new Date() - new Date('2021-12-06')) / (1000 * 60 * 60 * 24 * 30.436875)) % 12)} years` },
+      { label: "Experience", value: `${yoe} years` },
       { label: "Currently", value: "TCS — Full Stack Developer" },
       { label: "Certification", value: "AWS Certified Developer – Associate (DVA-02)" },
       { label: "Relocation target", value: "Germany / Netherlands" },
