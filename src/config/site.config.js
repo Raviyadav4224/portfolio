@@ -60,7 +60,7 @@ const siteConfig = {
       { label: "Experience", value: `${yoe} years` },
       { label: "Currently", value: "TCS — Full Stack Developer" },
       { label: "Certification", value: "AWS Certified Developer – Associate (DVA-02)" },
-      { label: "Relocation target", value: "Germany / Netherlands" },
+      { label: "Relocation target", value: "UK / Germany / Netherlands / EU" },
       { label: "German level", value: "Learning A1" },
     ],
   },
