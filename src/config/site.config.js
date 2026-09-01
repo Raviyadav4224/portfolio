@@ -39,7 +39,7 @@ const siteConfig = {
       "Backend-focused full stack developer building enterprise-scale " +
       "systems with Java, Spring Boot, Kafka, and Kubernetes — now growing " +
       "into AI-integrated backend engineering. Currently based in Kolkata, " +
-      "targeting relocation within India or the EU (Germany / Netherlands).",
+      "targeting relocation within India or the European Union (EU).",
   },
 
   about: {
